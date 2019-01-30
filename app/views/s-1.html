@@ -1,0 +1,524 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a care, supervision or emergency protection order
+{% endblock %}
+
+{% block header %}
+
+  {{ govukHeader({
+    "homepageUrl": "/",
+    "containerClasses": "govuk-width-container"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" >
+		
+		
+		
+<nav role="navigation" class="progress-indicator reveal">
+    <ol>
+         <li class="current">
+                <a data-nav-position="1 of 8: " href="s-1.html">
+                    Section 1
+                    <span class="visuallyhidden"> - current step</span>
+                </a>
+            </li>   
+		
+		<li class="inactive">
+                <a data-nav-position="2 of 8: " href="s-2.html">
+                    Section 2
+                    <span class="visuallyhidden"> - current step</span>
+                </a>
+            </li>
+            <li class="inactive">
+                <a data-nav-position="3 of 8: " href="s-3.html">
+                    Section 3
+                    
+                </a>
+            </li>
+            <li class="inactive">
+                <a data-nav-position="4 of 8: " href="s-4.html">
+                    Section 4
+                    
+                </a>
+            </li>
+            <li class="inactive">
+                <a data-nav-position="5 of 8: " href="s-5.html">
+                    Section 5
+                    
+                </a>
+            </li>
+		<li class="inactive">
+                <a data-nav-position="5 of 8: " href="s-6.html">
+                    Section 6
+                    
+                </a>
+            </li>
+		<li class="inactive">
+                <a data-nav-position="5 of 8: " href="s-7.html">
+                    Section 7
+                    
+                </a>
+            </li>
+		 <li class="inactive">
+                <a data-nav-position="6 of 8: " href="s-8.html">
+                    Review
+                    
+                </a>
+            </li>
+            
+        <li class="show-all"><a style="visibility: visible;">Show all steps</a></li>
+    </ol>
+</nav>
+
+      <h1 class="govuk-heading-m">
+		   <!--<span class="govuk-caption-xl">  Department for transport</span>-->
+      Section 1: Project Management and Strategic Alignment											
+											
+											
+      </h1>
+										 
+										<!-- <p>ID : AAA/1001</p>
+		 -->
+		
+		
+<div class="govuk-form-group">
+  <label class="govuk-label" for="project-name">
+    Project Name
+  </label>
+  <span id="project-name-hint" class="govuk-hint">
+    Each discrete proposal for a project should be named. Names should be used consistently throughout SR material. <!--short,  should be clear and avoid unnecessary jargon. -->
+  </span>
+  <input class="govuk-input govuk-input--width-20" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
+</div>
+		
+		<!--<p>Date added: 03/10/2018</p>
+		<p>Last updated: 30/01/2019</p>-->
+     
+
+     <h2  class="govuk-heading-m">Project Management</h2>
+
+		<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Group
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">DfT Group 1 </option>
+    <option value="updated" selected>DfT Group 2 </option>
+    <option value="views">DfT Group 3 </option>
+    <option value="comments">DfT Group 4 </option>
+  </select>
+</div>
+		
+	
+
+		<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+ Directorate	
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">DfT Group 1 </option>
+    <option value="updated" selected>DfT Group 2 </option>
+    <option value="views">DfT Group 3 </option>
+    <option value="comments">DfT Group 4 </option>
+  </select>
+</div>
+		
+	<!--		<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+ Type of project 	
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">DfT Group 1 </option>
+    <option value="updated" selected>DfT Group 2 </option>
+    <option value="views">DfT Group 3 </option>
+    <option value="comments">DfT Group 4 </option>
+  </select>
+</div>-->  
+		
+		<!-- Input feild-->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="name-of-programme">
+    <span class="govuk-label---s">  Division</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="division" name="division" type="text" value="{{ data['division'] }}">
+</div>
+		
+		
+		
+		
+		<!--  Type of Project-->
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+
+  
+      Type of project
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="project-type-conditional-1" name="project-type" type="radio" value="Standalone project" {{ checked('project-type','Standalone project') }} data-aria-controls="conditional-project-type-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="project-type-conditional-1">
+     Standalone project
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="project-type-conditional-2" name="project-type" type="radio" value="Project within a programme" {{ checked('project-type','Project within a programme') }} data-aria-controls="conditional-project-type-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="child-1-gender-conditional-2">
+       Project within a programme
+      </label>
+      </div>
+		
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="project-type-conditional-3" name="project-type" type="radio" value="Competitive fund" {{ checked('project-type','Competitive fund') }} data-aria-controls="conditional-project-type-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="project-type-conditional-3">
+       Competitive fund
+      </label>
+      </div>
+		
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="project-type-conditional-4" name="project-type" type="radio" value="Grant fund" {{ checked('project-type','Grant fund') }} data-aria-controls="conditional-project-type-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="project-type-conditional-4">
+   	Grant fund
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="project-type-conditional-5" name="project-type" type="radio" value="Others" {{ checked('child-1-gender','Others') }} data-aria-controls="conditional-project-type-conditional-5">
+        <label class="govuk-label govuk-radios__label" for="project-type-conditional-5">
+       Others
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-project-type-conditional-5">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="project-type-text">
+    Please specify
+  </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="project-type-others" type="text" value="{{ data['project-type-others'] }}">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+		
+		<!-- Input feild-->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="name-of-programme">
+    <span class="govuk-label---s">  If it is a project that is part of a programme, what is the name of the programme?
+</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="name-of-programme" name="name-of-programme" type="text" value="{{ data['name-of-programme'] }}">
+</div>
+		<!--  political commitment -->
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+
+      Has there been a political commitment to undertake this specific project?	
+	
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="political-commitment-conditional-1" name="political-commitment" type="radio" value="Yes, a public announcement has been made about this scheme/project" {{ checked('project-type','Yes, a public announcement has been made about this scheme/project') }} data-aria-controls="conditional-political-commitment-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="project-type-conditional-1">
+   Yes, a public announcement has been made about this scheme/project
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="political-commitment-conditional-2" name="political-commitment" type="radio" value="No, but DfT has publicly committed to doing something to address a key objective of this project" {{ checked('political-commitment','No, but DfT has publicly committed to doing something to address a key objective of this project') }} data-aria-controls="conditional-project-type-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-2">
+    No, but DfT has publicly committed to doing something to address a key objective of this project
+      </label>
+      </div>
+		
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="political-commitment-conditional-3" name="political-commitment" type="radio" value="No, there has been no public commitment this project" {{ checked('political-commitment','No, there has been no public commitment this project') }} data-aria-controls="conditional-political-commitment-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-3">
+      No, there has been no public commitment this project 
+      </label>
+      </div>
+		
+	
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="political-commitment-conditional-4" name="political-commitment" type="radio" value="Others" {{ checked('political-commitment','Others') }} data-aria-controls="conditional-political-commitment-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-4">
+       Others
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-political-commitment-conditional-4">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="political-commitment-text">
+    Please specify
+  </label>
+            <input class="govuk-input govuk-!-width-one-third" id="political-commitment-text" name="political-commitment-others" type="text" value="{{ data['political-commitment-others'] }}">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+		<!--  agreed with minister -->
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+
+      Is the project/activity part of current policy assumptions that have been agreed with Ministers? 	
+	
+	
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="agreed-with-minister-conditional-1" name="agreed-with-minister" type="radio" value="Yes" {{ checked('agreed-with-minister','Yes') }} data-aria-controls="conditional-political-commitment-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="agreed-with-minister-conditional-1">
+   Yes
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="agreed-with-minister-conditional-2" name="agreed-with-minister" type="radio" value="No" {{ checked('agreed-with-minister','No') }} data-aria-controls="conditional-agreed-with-minister-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="agreed-with-minister-conditional-2">
+    No 
+      </label>
+      </div>
+		
+		
+		
+	
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="agreed-with-minister-conditional-3" name="agreed-with-minister" type="radio" value="Others" {{ checked('agreed-with-minister','Others') }} data-aria-controls="conditional-agreed-with-minister-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="agreed-with-minister-conditional-3">
+       Others
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-agreed-with-minister-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="agreed-with-minister-text">
+    Please specify
+  </label>
+            <input class="govuk-input govuk-!-width-one-third" id="agreed-with-minister-text" name="agreed-with-minister-others" type="text" value="{{ data['agreed-with-minister-others'] }}">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+		
+		
+		<!--  long term funding -->
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+
+      Was there a Long-term funding commitment at SR15?	
+		
+	
+	
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="long-term-funding-conditional-1" name="long-term-funding" type="radio" value="Yes" {{ checked('long-term-funding','Yes') }} data-aria-controls="conditional-long-term-funding-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="along-term-funding-conditional-1">
+   Yes
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="long-term-funding-conditional-2" name="long-term-funding" type="radio" value="No" {{ checked('long-term-funding','No') }} data-aria-controls="conditional-long-term-funding-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="long-term-funding-conditional-2">
+    No 
+      </label>
+      </div>
+		
+		
+		
+	
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="long-term-funding-conditional-3" name="long-term-funding" type="radio" value="Others" {{ checked('long-term-funding','Others') }} data-aria-controls="conditional-long-term-funding-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="long-term-funding-conditional-3">
+       Others
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-long-term-funding-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="long-term-funding-text">
+    Please specify
+  </label>
+            <input class="govuk-input govuk-!-width-one-third" id="long-term-funding-text" name="long-term-funding-others" type="text" value="{{ data['long-term-funding-others'] }}">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+		
+		
+		<h2  class="govuk-heading-m">Key contacts</h2>
+	
+		<!-- Input feild-->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="Senior-Responsible-Owner	">
+    <span class="govuk-label---s">  Senior Responsible Owner	
+</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="senior-responsible-owner" name="senior-responsible-owner" type="text" value="{{ data['senior-responsible-owner'] }}">
+</div>
+		
+			<!-- Input feild-->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="project-manager">
+    <span class="govuk-label---s">  Project Manager
+</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="project-manager" name="project-manager" type="text" value="{{ data['project-manager'] }}">
+</div>
+			<!-- Input feild-->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="senior-analytical-lead">
+    <span class="govuk-label---s">  Senior Analytical Lead
+</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="senior-analytical-lead" name="senior-analytical-lead" type="text" value="{{ data['senior-analytical-lead'] }}">
+</div>
+		
+		<!-- Input feild-->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="analytical-lead">
+    <span class="govuk-label---s">  Analytical Lead
+</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="analytical-lead" name="analytical-lead" type="text" value="{{ data['analytical-lead'] }}">
+</div>
+		
+		<!-- Input feild-->
+		
+		<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="policy-lead">
+    <span class="govuk-label---s">  Policy Lead
+</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="analytical-lead" name="policy-lead" type="text" value="{{ data['policy-lead'] }}">
+</div>
+		
+      	<!-- Input feild-->
+		
+		<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="SCS-Signing-off-data">
+    <span class="govuk-label---s"> SCS Signing off data
+</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="SCS-Signing-off-data" name="SCS-Signing-off-data" type="text" value="{{ data['SCS-Signing-off-data'] }}">
+</div>
+		
+		<!--  nominated SCS -->
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+
+      Has this project been signed off by the nominated SCS?	
+	
+		
+	
+	
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nominated-SCS-conditional-1" name="nominated-SCS" type="radio" value="Yes" {{ checked('nominated-SCS','Yes') }} data-aria-controls="conditional-nominated-SCS-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="nominated-SCS-conditional-1">
+   Yes
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nominated-SCS-conditional-2" name="nominated-SCS" type="radio" value="No" {{ checked('nominated-SCS','No') }} data-aria-controls="conditional-nominated-SCS-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="nominated-SCS-conditional-2">
+    No 
+      </label>
+      </div>
+		
+		
+		
+	
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nominated-SCS-conditional-3" name="nominated-SCS" type="radio" value="Others" {{ checked('nominated-SCS','Others') }} data-aria-controls="conditional-nominated-SCS-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="nominated-SCS-conditional-3">
+       Others
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-nominated-SCS-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="nominated-SCS-text">
+    Please specify
+  </label>
+            <input class="govuk-input govuk-!-width-one-third" id="nominated-SCS-text" name="nominated-SCS-others" type="text" value="{{ data['nominated-SCS-others'] }}">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+		
+		
+		
+		
+		<button type="submit" class="govuk-button">
+  Save and continue
+</button>
+		
+
+    </div>
+
+    <div class="govuk-grid-column-one-third" style="display: none;">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-body-s">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="visuallyhidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
