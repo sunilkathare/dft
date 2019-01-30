@@ -1,13 +1,11 @@
-<!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
-
-<style>
+@charset "UTF-8";
+/* CSS Document */
 
 /* Progress indicator*/
 
 
 .progress-indicator {
- margin-bottom: 20px; margin-top: -40px;	zoom: 1
+	zoom: 1; margin-bottom: 20px; margin-top: -40px; 
 }
 .progress-indicator:before, .progress-indicator:after {
 	content: '\0020';
@@ -148,10 +146,10 @@
 }
 .progress-indicator li, .progress-indicator.reveal li {
 	float: left;
-	display: list-item
+	display: list-item;
 }
 .progress-indicator li.current, .progress-indicator.reveal li.current {
-	list-style-type: decimal;
+	list-style-type:none 
 	width: auto
 }
 .progress-indicator li.current a:before, .progress-indicator.reveal li.current a:before {
@@ -161,6 +159,68 @@
 	display: none
 }
 }
+/*.secure-exit {
+	padding: 4rem 0
+}
+.hidden {
+	display: none;
+	visibility: hidden
+}
+[aria-hidden=true] {
+	display: block
+}
+.js-enabled [aria-hidden=true] {
+	display: none
+}
+
+
+.grey-text{
+color:#6f777b; margin: 0px;	padding: 0px;
+}
+
+.blue-bold-text{
+color:#005EA5;; margin: 0px;	padding: 0px;font-weight: bold;
+}
+
+.small-text{font-size: 70%;
+}
+
+.dashboard-box-link a:hover .govuk-box-highlight {
+	background-color:#006435;
+	outline-color: transparent;
+	text-align: left;
+	
+	
+	
+}
+.dashboard-box-link a .govuk-box-highlight, .dashboard-box-link a {
+	text-decoration: none;
+	text-align: left;
+}
+
+.task-incomplete{ background-color:#F8F8F8; text-transform: uppercase; padding: 2px 8px 0;font-size: 16px;
+line-height: 1.25; font-weight: 600; color:#6F777B;}
+
+.task-new{ background-color:#F63336; text-transform: uppercase; padding: 2px 8px 0;font-size: 16px;
+line-height: 1.25; font-weight: 600; color:#fff;}
+
+.task-in-progress{background-color:#4C2C92; text-transform: uppercase; padding: 2px 8px 0;font-size: 16px;
+line-height: 1.25; font-weight: 600; color:#fff;}
+.temp-notification{ position:relative; background-image: url("/public/images/notification-my-account.png");
+background-repeat: no-repeat;
+background-position: 100% 50%; background-size: cover; display:inline-block;  width: 70px; height: 37px; float:right;}
+
+
+.page-contents__list li{font-family:"nta", Arial, sans-serif;font-weight:400;text-transform:none;font-size:14px;line-height:1.1428571429;list-style-type:none;margin-bottom:15px;margin-left:0px;margin-right:20px;padding-right:10px; border-bottom: 0px solid #ccc; }@media (min-width: 641px){.page-contents__list li{font-size:16px;border-bottom: 0px solid #f0f0f0; line-height:1.25}}.page-contents__list li:before{content:"";float:left;display:block;width:10px;margin-left:-10px}.page-contents__list a{text-decoration:underline;letter-spacing:0.022em}.page-contents__list a:hover,.page-contents__list a:focus,.page-contents__list a:active{text-decoration:none}.page-contents__list .active{letter-spacing:0;font-weight:bold }.page-header{margin-bottom:15px;margin-top:15px}
+
+.page-contents__list li.current{display: block;
+padding: 8px 10px 8px 10px;
+border-left: 4px solid #005EA5;
+color: #005ea5;
+background: inherit;
+text-decoration: none;
+font-weight: bold;
+}*/
 
 .visually-hidden,
 .visuallyhidden {
@@ -174,4 +234,3 @@
   border: 0;
 }
 
-</style>
