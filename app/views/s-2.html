@@ -66,8 +66,8 @@
         <li class="show-all"><a style="visibility: visible;">Show all steps</a></li>
     </ol>
 </nav>
-
-      <h1 class="govuk-heading-m">
+<form action="s-3.html">
+      <h1 class="govuk-heading-l">
 		   <!--<span class="govuk-caption-xl">  Department for transport</span>-->
        Section 2: Project details and decision making												
 												
@@ -664,7 +664,7 @@
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
           <label class="govuk-label govuk-date-input__label" for="dob-year">
-            Year
+            
           </label>
           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
         </div>
@@ -674,7 +674,7 @@
 </div>
 	  
 	  
-	  
+	  </div>
 	  <h2  class="govuk-heading-m">Decesion making </h2>
 		
 		
@@ -820,15 +820,45 @@
   </fieldset>
 </div>
 
-		
-		
-		
-		
-		
-		
-		<button type="submit" class="govuk-button">
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      
+        Next board update
+      
+    </legend>
+    <span id="dob-hint" class="govuk-hint">
+      For example, 11 2020
+    </span>
+    
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset><button type="submit" class="govuk-button">
   Save and continue
 </button>
+		
+</div>
+	  
+		
+		
+		
+	</div>
+		
 		
 
     </div>

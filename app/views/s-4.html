@@ -13,7 +13,7 @@
 		
 <nav role="navigation" class="progress-indicator reveal">
     <ol>
-         <li class="current">
+         <li class="inactive">
                 <a data-nav-position="1 of 8: " href="s-1.html">
                     Section 1
                     <span class="visuallyhidden"> - current step</span>
@@ -32,7 +32,7 @@
                     
                 </a>
             </li>
-            <li class="inactive">
+            <li class="current">
                 <a data-nav-position="4 of 8: " href="s-4.html">
                     Section 4
                     
@@ -67,46 +67,116 @@
     </ol>
 </nav>
 		
-		<form action="s-2.html">
+		<form action="s-5.html">
 
       <h1 class="govuk-heading-l">
 		   <!--<span class="govuk-caption-xl">  Department for transport</span>-->
-      Section 1: Project management and strategic alignment											
+      Section 4: Economic costs					
+					
+									
+					
+														
 											
-											
+											 </h1>
+			
+			
+			
+			
+			<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h1 class="govuk-fieldset__heading">
+       Appraisal start year	
       </h1>
-										 
-<!-- <p>ID : AAA/1001</p>-->
-		
-		
-<div class="govuk-form-group">
-  <label class="govuk-label" for="project-name">
-    Project Name
-  </label>
-  <span id="project-name-hint" class="govuk-hint">
-    Each discrete proposal for a project should be named. Names should be used consistently throughout SR material short,  should be clear and avoid unnecessary jargon. For example, AAA1
-  </span>
-	
-	<input class="govuk-input govuk-!-width-one-half" id="project-name" name="project-name" type="text" value="{{ data['project-name'] }}">
-	
-  
+    </legend>
+    <span id="dob-hint" class="govuk-hint">
+      For example, 2018
+    </span>
+    <div class="govuk-date-input" id="dob">
+      
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+			
+			
+			<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h1 class="govuk-fieldset__heading">
+       Appraisal end year	
+      </h1>
+    </legend>
+    <span id="dob-hint" class="govuk-hint">
+      For example, 2022
+    </span>
+    <div class="govuk-date-input" id="dob">
+      
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
 </div>
 		
-		<!--<p>Date added: 03/10/2018</p>
-		<p>Last updated: 30/01/2019</p>-->
+			
+			
+			
+										 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+     
+        Financial transaction	
+     
+    </legend>
+    <span id="changed-name-hint" class="govuk-hint">
+     Specify if project is a financial transaction. Chapter 8 of Consolidated Budgeting Guidance 2018-19 explains criteria for treatment as a financial transaction. E.g.: setting terms on bonds to be issued, bonds already issued where terms being renewed etc.
+    </span>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="financial-transaction-1" name="financial-transaction" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="financial-transaction-2" name="financial-transaction" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+		
+		
+
      
 
-     <h2  class="govuk-heading-m">Project management</h2>
+    
 
 		<div class="govuk-form-group">
   <label class="govuk-label" for="Group">
-    Group
+  Construction price inflation	
   </label>
-  <select class="govuk-select" id="Group" name="Group">
-    <option value="Roads, Devolution and Motoring Group">Roads, Devolution and Motoring Group </option>
-    <option value="High Speed and Major Rail Projects Group" selected>High Speed and Major Rail Projects Group </option>
-    <option value="Resources and Strategy Group<">Resources and Strategy Group</option>
-    <option value="International, Security and Environment Group">International, Security and Environment Group </option>
+  <select class="govuk-select" id="Group" name="construction-price-inflation">
+    <option value="Construction-price-inflation option 1">Construction-price-inflation option 1</option>
+    <option value="Construction-price-inflation option 2" selected>Construction-price-inflation option 2 </option>
+    <option value="Construction-price-inflation option 3">Construction-price-inflation option 3</option>
+    <option value="Construction-price-inflation option 4">Construction-price-inflation option 4 </option>
   </select>
 </div>
 		
