@@ -1,0 +1,384 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Value for Money (VfM) Database and Data Collection Tool
+{% endblock %}
+
+{% block header %}
+
+  {{ govukHeader({
+    "homepageUrl": "/",
+    "containerClasses": "govuk-width-container"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" >
+		
+		
+		
+<nav role="navigation" class="progress-indicator reveal">
+    <ol>
+         <li class="inactive">
+                <a data-nav-position="1 of 8: " href="s-1.html">
+                    Section 1
+                    <span class="visuallyhidden"> - current step</span>
+                </a>
+            </li>   
+		
+		<li class="inactive">
+                <a data-nav-position="2 of 8: " href="s-2.html">
+                    Section 2
+                    <span class="visuallyhidden"> - current step</span>
+                </a>
+            </li>
+            <li class="inactive">
+                <a data-nav-position="3 of 8: " href="s-3.html">
+                    Section 3
+                    
+                </a>
+            </li>
+            <li class="inactive">
+                <a data-nav-position="4 of 8: " href="s-4.html">
+                    Section 4
+                    
+                </a>
+            </li>
+            <li class="inactive">
+                <a data-nav-position="5 of 8: " href="s-5.html">
+                    Section 5
+                    
+                </a>
+            </li>
+		<li class="inactive">
+                <a data-nav-position="5 of 8: " href="s-6.html">
+                    Section 6
+                    
+                </a>
+            </li>
+		<li class="inactive">
+                <a data-nav-position="5 of 8: " href="s-7.html">
+                    Section 7
+                    
+                </a>
+            </li>
+		 <li class="current">
+                <a data-nav-position="6 of 8: " href="s-8.html">
+                    Review
+                    
+                </a>
+            </li>
+            
+        <li class="show-all"><a style="visibility: visible;">Show all steps</a></li>
+    </ol>
+</nav>
+
+     
+		
+		<div class="govuk-width-container">
+<!--  <a href="#" class="govuk-back-link">Back</a>
+-->
+  <main class="govuk-main-wrapper- " id="main-content" role="main">
+    <div class="govuk-grid-row-">
+      <div class="govuk-grid-column-two-thirds-from-desktop-">
+
+        <h1 class="govuk-heading-l">Check your answers </h1>
+
+        <h2 class="govuk-heading-m">Section 1: Project management and strategic alignment </h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Prject Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+                {{ data['project-name'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Group
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['Group'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Group</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Directorate 
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['Directorate'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Directorate</span>
+              </a>
+            </dd>
+          </div>
+			<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Division
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['division'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> division</span>
+              </a>
+            </dd>
+          </div>
+			<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type of project
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['project-type'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Type of project</span>
+              </a>
+            </dd>
+          </div>
+			
+			<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Has there been a political commitment to undertake this specific project?	
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['political-commitment'] }} <br/>
+				{{ data['political-commitment-others'] }}	</dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Political commitment	</span>
+              </a>
+            </dd>
+          </div>
+			
+				
+			
+				<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Is the project/activity part of current policy assumptions that have been agreed with Ministers? 
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['agreed-with-minister'] }} <br/>
+				{{ data['agreed-with-minister-others'] }}	</dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Project agreed with Ministers	</span>
+              </a>
+            </dd>
+          </div>
+			
+			
+			<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Was there a Long-term funding commitment at SR15?	
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['long-term-funding'] }} <br/>
+				{{ data['long-term-funding-others'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Long-term funding commitment at SR15	</span>
+              </a>
+            </dd>
+          </div>
+			
+			
+			
+			
+        </dl>
+
+        <h2 class="govuk-heading-m">Key contacts</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Senior Responsible Owner
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['senior-responsible-owner'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Senior Responsible Owner</span>
+              </a>
+            </dd>
+          </div>
+			<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Project Manager
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['project-manager'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Project manager</span>
+              </a>
+            </dd>
+          </div>
+			
+			<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           Senior Analytical Lead
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['senior-analytical-lead'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Senior Analytical Lead</span>
+              </a>
+            </dd>
+          </div>
+			
+			<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           Analytical Lead
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['analytical-lead'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Analytical Lead</span>
+              </a>
+            </dd>
+          </div>
+			
+			<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           Policy Lead
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['policy-lead'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Policy Lead</span>
+              </a>
+            </dd>
+          </div>
+			
+			<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+          SCS Signing off data
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['SCS-Signing-off-data'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> SCS-Signing-off-data</span>
+              </a>
+            </dd>
+          </div>
+			
+			<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+          Has this project been signed off by the nominated SCS?
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['nominated-SCS'] }} <br/> {{ data['nominated-SCS-others'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="s-1">
+                Change
+                <span class="govuk-visually-hidden"> Has this project been signed off by the nominated SCS?
+</span>
+              </a>
+            </dd>
+          </div>
+			
+          
+        </dl>
+
+        <h2 class="govuk-heading-m">Now send information</h2>
+
+        <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the information you are providing are correct.</p>
+
+        <form action="confirm" method="post" >
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button type="submit" class="govuk-button">
+            Accept and send
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+		
+		
+		
+		
+
+   
+
+    <div class="govuk-grid-column-one-third" style="display: none;">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-body-s">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="visuallyhidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,270 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Value for Money (VfM) Database and Data Collection Tool
+{% endblock %}
+
+{% block header %}
+
+  {{ govukHeader({
+    "homepageUrl": "/",
+    "containerClasses": "govuk-width-container"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" >
+		
+		
+		
+<nav role="navigation" class="progress-indicator reveal">
+    <ol>
+         <li class="inactive">
+                <a data-nav-position="1 of 8: " href="s-1.html">
+                    Section 1
+                    <span class="visuallyhidden"> - current step</span>
+                </a>
+            </li>   
+		
+		<li class="inactive">
+                <a data-nav-position="2 of 8: " href="s-2.html">
+                    Section 2
+                    <span class="visuallyhidden"> - current step</span>
+                </a>
+            </li>
+            <li class="inactive">
+                <a data-nav-position="3 of 8: " href="s-3.html">
+                    Section 3
+                    
+                </a>
+            </li>
+            <li class="inactive">
+                <a data-nav-position="4 of 8: " href="s-4.html">
+                    Section 4
+                    
+                </a>
+            </li>
+            <li class="inactive">
+                <a data-nav-position="5 of 8: " href="s-5.html">
+                    Section 5
+                    
+                </a>
+            </li>
+		<li class="inactive">
+                <a data-nav-position="5 of 8: " href="s-6.html">
+                    Section 6
+                    
+                </a>
+            </li>
+		<li class="inactive">
+                <a data-nav-position="5 of 8: " href="s-7.html">
+                    Section 7
+                    
+                </a>
+            </li>
+		 <li class="current">
+                <a data-nav-position="6 of 8: " href="s-8.html">
+                    Review
+                    
+                </a>
+            </li>
+            
+        <li class="show-all"><a style="visibility: visible;">Show all steps</a></li>
+    </ol>
+</nav>
+
+     
+		
+		<div class="govuk-width-container">
+<!--  <a href="#" class="govuk-back-link">Back</a>
+-->
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers </h1>
+
+        <h2 class="govuk-heading-m">Personal details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Sarah Philips
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+                <span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 January 1978
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+                <span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Contact information
+            </dt>
+            <dd class="govuk-summary-list__value">
+              72 Guild Street
+              <br>London
+              <br>SE23 6FH
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+                <span class="govuk-visually-hidden"> contact information</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Contact details
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">07700 900457</p>
+              <p class="govuk-body">sarah.phillips@example.com</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+                <span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">Application details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Previous application number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              502135326
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+                <span class="govuk-visually-hidden"> previous application number</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Licence type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              For personal use
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+                <span class="govuk-visually-hidden"> licence type</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Home address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              72 Guild Street
+              <br>London
+              <br>SE23 6FH
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+                <span class="govuk-visually-hidden"> home address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Licence period
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Valid for 6 months
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+                <span class="govuk-visually-hidden"> licence period</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">Now send your application</h2>
+
+        <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+        <form action="/form-handler" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button type="submit" class="govuk-button">
+            Accept and send
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+		
+		
+		
+		
+
+   
+
+    <div class="govuk-grid-column-one-third" style="display: none;">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-body-s">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="visuallyhidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}

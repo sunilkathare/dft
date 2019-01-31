@@ -74,16 +74,17 @@
         <li class="show-all"><a style="visibility: visible;">Show all steps</a></li>
     </ol>
 </nav>
+		
+		<form action="s-2.html">
 
       <h1 class="govuk-heading-m">
 		   <!--<span class="govuk-caption-xl">  Department for transport</span>-->
-      Section 1: Project Management and Strategic Alignment											
+      Section 1: Project management and strategic alignment											
 											
 											
       </h1>
 										 
-										<!-- <p>ID : AAA/1001</p>
-		 -->
+<!-- <p>ID : AAA/1001</p>-->
 		
 		
 <div class="govuk-form-group">
@@ -91,9 +92,12 @@
     Project Name
   </label>
   <span id="project-name-hint" class="govuk-hint">
-    Each discrete proposal for a project should be named. Names should be used consistently throughout SR material. <!--short,  should be clear and avoid unnecessary jargon. -->
+    Each discrete proposal for a project should be named. Names should be used consistently throughout SR material short,  should be clear and avoid unnecessary jargon. For example, AAA1
   </span>
-  <input class="govuk-input govuk-input--width-20" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
+	
+	<input class="govuk-input govuk-!-width-one-half" id="project-name" name="project-name" type="text" value="{{ data['project-name'] }}">
+	
+  
 </div>
 		
 		<!--<p>Date added: 03/10/2018</p>
@@ -103,28 +107,31 @@
      <h2  class="govuk-heading-m">Project Management</h2>
 
 		<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
+  <label class="govuk-label" for="Group">
     Group
   </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="published">DfT Group 1 </option>
-    <option value="updated" selected>DfT Group 2 </option>
-    <option value="views">DfT Group 3 </option>
-    <option value="comments">DfT Group 4 </option>
+  <select class="govuk-select" id="Group" name="Group">
+    <option value="Roads, Devolution and Motoring Group">Roads, Devolution and Motoring Group </option>
+    <option value="High Speed and Major Rail Projects Group" selected>High Speed and Major Rail Projects Group </option>
+    <option value="Resources and Strategy Group<">Resources and Strategy Group</option>
+    <option value="International, Security and Environment Group">International, Security and Environment Group </option>
   </select>
 </div>
 		
 	
 
 		<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
+  <label class="govuk-label" for="Directorate">
  Directorate	
   </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="published">DfT Group 1 </option>
-    <option value="updated" selected>DfT Group 2 </option>
-    <option value="views">DfT Group 3 </option>
-    <option value="comments">DfT Group 4 </option>
+  <select class="govuk-select" id="Directorate" name="Directorate">
+    
+    <option value="Major Rail Projects Developmen" selected>Major Rail Projects Development</option>
+    <option value="Phase 1 HS2 ">Phase 1 HS2 </option>
+	  <option value="Phase 2
+and Northern Powerhouse Rail">Phase 2
+and Northern Powerhouse Rail </option>
+    <option value="Programme Integration">Programme Integration</option>
   </select>
 </div>
 		
@@ -489,7 +496,7 @@
   Save and continue
 </button>
 		
-
+		</form>
     </div>
 
     <div class="govuk-grid-column-one-third" style="display: none;">

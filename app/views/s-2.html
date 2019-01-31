@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Apply for a care, supervision or emergency protection order
+  Value for Money (VfM) Database and Data Collection Tool
 {% endblock %}
 
 {% block header %}
@@ -77,14 +77,15 @@
 
       <h1 class="govuk-heading-m">
 		   <!--<span class="govuk-caption-xl">  Department for transport</span>-->
-       Section 2: Project Details and Decision Making												
+       Section 2: Project details and decision making												
 												
 																						
 											
 											
       </h1>
 										 
-										
+				<h2 class="govuk-heading-m">Project details</h2>
+		<!--  textarea -->
 		<div class="govuk-form-group">
           <label class="govuk-label" for="scheme-description">
    Scheme Description (max 200 characters)	
@@ -93,124 +94,658 @@
     <textarea class="govuk-textarea govuk-!-width-two-thirds" id="scheme-description" name="scheme-description" rows="3" aria-describedby="scheme-description-hint">{{ data['scheme-description'] }}</textarea>
         </div>
 		
-		
-		
-<div class="govuk-form-group">
-  <label class="govuk-label" for="project-name">
-    Project Name
-  </label>
-  <span id="project-name-hint" class="govuk-hint">
-    Each discrete proposal for a project should be named. Names should be used consistently throughout SR material. <!--short,  should be clear and avoid unnecessary jargon. -->
-  </span>
-  <input class="govuk-input govuk-input--width-20" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
-</div>
-		
-		<!--<p>Date added: 03/10/2018</p>
-		<p>Last updated: 30/01/2019</p>-->
-     
-
-     <h2  class="govuk-heading-m">Project Management</h2>
-
+		<!--  Geographic coverage	 -->
 		<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
-    Group
-  </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="published">DfT Group 1 </option>
-    <option value="updated" selected>DfT Group 2 </option>
-    <option value="views">DfT Group 3 </option>
-    <option value="comments">DfT Group 4 </option>
-  </select>
-</div>
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+
+      Geographic coverage	
+	
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="geographic-coverage-conditional-1" name="geographic-coverage" type="radio" value="National" {{ checked('geographic-coverage','National') }} data-aria-controls="conditional-geographic-coverage-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="geographic-coverage-conditional-1">
+   National 
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="geographic-coverage-conditional-2" name="geographic-coverage" type="radio" value="Regional" {{ checked('geographic-coverage','Regional') }} data-aria-controls="conditional-geographic-coverage-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="geographic-coverage-conditional-2">
+   Regional 
+      </label>
+      </div>
+		
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="geographic-coverage-conditional-3" name="geographic-coverage" type="radio" value="Multi Regional" {{ checked('geographic-coverage','Multi Regional') }} data-aria-controls="conditional-geographic-coverage-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="geographic-coverage-conditional-3">
+      Multi Regional
+      </label>
+      </div>
+		
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="geographic-coverage-conditional-4" name="geographic-coverage" type="radio" value="Local" {{ checked('geographic-coverage','Local') }} data-aria-controls="conditional-geographic-coverage-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="geographic-coverage-conditional-4">
+      Local 
+      </label>
+      </div>
 		
 	
 
-		<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
- Directorate	
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="geographic-coverage-conditional-5" name="geographic-coverage" type="radio" value="Others" {{ checked('geographic-coverage','Others') }} data-aria-controls="conditional-geographic-coverage-conditional-5">
+        <label class="govuk-label govuk-radios__label" for="geographic-coverage-conditional-5">
+       Others
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-geographic-coverage-conditional-5">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="geographic-coverage-text">
+    Please specify
   </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="published">DfT Group 1 </option>
-    <option value="updated" selected>DfT Group 2 </option>
-    <option value="views">DfT Group 3 </option>
-    <option value="comments">DfT Group 4 </option>
+            <input class="govuk-input govuk-!-width-one-third" id="geographic-coverage-text" name="geographic-coverage-others" type="text" value="{{ data['geographic-coverage-others'] }}">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+		
+		<!--  Investment category	 -->
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+
+    Investment category	
+	
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="investment-category-conditional-1" name="investment-category" type="radio" value="Enhancement" {{ checked('investment-category','Enhancement') }} data-aria-controls="conditional-investment-category-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="investment-categorye-conditional-1">
+   Enhancement  
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="investment-category-conditional-2" name="investment-category" type="radio" value="Renewal" {{ checked('investment-category','Renewal') }} data-aria-controls="conditional-investment-category-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="investment-category-conditional-2">
+   Renewal
+      </label>
+      </div>
+		
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="investment-category-conditional-3" name="investment-category" type="radio" value="Maintenance" {{ checked('investment-category','Maintenance') }} data-aria-controls="conditional-investment-category-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="investment-category-conditional-3">
+    Maintenance
+      </label>
+      </div>
+		
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="investment-category-conditional-4" name="investment-category" type="radio" value="Asset sale" {{ checked('investment-category','Asset sale') }} data-aria-controls="conditional-investment-category-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="investment-category-conditional-4">
+   Asset sale 
+      </label>
+      </div>
+		
+	
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="investment-category-conditional-5" name="investment-category" type="radio" value="Others" {{ checked('investment-category','Others') }} data-aria-controls="conditional-investment-category-conditional-5">
+        <label class="govuk-label govuk-radios__label" for="investment-category-conditional-5">
+       Others
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-investment-category-conditional-5">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="investment-category-text">
+    Please specify
+  </label>
+            <input class="govuk-input govuk-!-width-one-third" id="investment-category-text" name="investment-category-others" type="text" value="{{ data['investment-categoryothers'] }}">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+		
+		<!--  select/dropdown-->
+		
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+   Mode
+  </label>
+  <select class="govuk-select" id="sort" name="mode">
+    <option value="Road">Roads </option>
+    <option value="Buses" selected>Buses </option>
+    <option value="Cycling">Cycling</option>
+    <option value="Walking">Walking </option>
+	<option value="Aviation">Aviation </option>
+	<option value="Maritime ">Maritime </option>
+	<option value="High Speed Rail">High Speed Rail </option>
   </select>
 </div>
 		
-	<!--		<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
- Type of project 	
-  </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="published">DfT Group 1 </option>
-    <option value="updated" selected>DfT Group 2 </option>
-    <option value="views">DfT Group 3 </option>
-    <option value="comments">DfT Group 4 </option>
-  </select>
-</div>-->  
+		
+	
+
+	
 		
 		<!-- Input feild-->
 
 <div class="govuk-form-group">
   <label class="govuk-label govuk-!-width-one-half" for="name-of-programme">
-    <span class="govuk-label---s">  Division</span>
+    <span class="govuk-label---s">  Project Type</span>
   </label>
-  <input class="govuk-input govuk-!-width-one-half" id="division" name="division" type="text" value="{{ data['division'] }}">
+	<span id="project-type-hint" class="govuk-hint">
+    Please include details about the project type. For example, Junction, smart motorway, bypass, tunnel, Local major, cycling & walking, route upgrade, Franchise, digital, rolling stock, electrification, subsidies etc.
+  </span>
+  <input class="govuk-input govuk-!-width-one-half" id="division" name="project-type" type="text" value="{{ data['project-type'] }}">
+</div>
+		
+		<!-- checkbox -->
+		
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  
+       Region in which the project/scheme is based
+      
+    </legend>
+    <span id="region-based-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-based-1" name="region-based" type="checkbox" value="Esat Midlands">
+        <label class="govuk-label govuk-checkboxes__label" for="region-based-1">
+          Esat Midlands
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-based-2" name="region-based" type="checkbox" value="London">
+        <label class="govuk-label govuk-checkboxes__label" for="region-based-2">
+          London
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="North west">
+        <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
+          North west
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="South West">
+        <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
+          South West
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="Eastern England">
+        <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
+        Eastern England
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="North East">
+        <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
+       North East
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="South East">
+        <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
+         South East
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="Yorkshire & Humber">
+        <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
+         Yorkshire & Humber
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+		
+		
+		<!-- checkbox -->
+		
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  
+       Region in which the project/scheme is impacted
+      
+    </legend>
+    <span id="region-based-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-impacted-1" name="region-impacted" type="checkbox" value="East Midlands">
+        <label class="govuk-label govuk-checkboxes__label" for="region-impacted-1">
+          Esat Midlands
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-impacted-2" name="region-impacted" type="checkbox" value="London">
+        <label class="govuk-label govuk-checkboxes__label" for="region-impacted-2">
+          London
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-impacted-3" name="region-impacted" type="checkbox" value="North west">
+        <label class="govuk-label govuk-checkboxes__label" for="region-impacted-3">
+          North west
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-based-4" name="region-impacted" type="checkbox" value="South West">
+        <label class="govuk-label govuk-checkboxes__label" for="region-impacted-4">
+          South West
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-impacted-5" name="region-impacted" type="checkbox" value="Eastern England">
+        <label class="govuk-label govuk-checkboxes__label" for="region-impacted-5">
+        Eastern England
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-impacted-6" name="region-impacted" type="checkbox" value="North East">
+        <label class="govuk-label govuk-checkboxes__label" for="region-impacted-6">
+       North East
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-impacted-7" name="region-impacted" type="checkbox" value="South East">
+        <label class="govuk-label govuk-checkboxes__label" for="region-impacted-7">
+         South East
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-impacted-8" name="region-impacted" type="checkbox" value="Yorkshire & Humber">
+        <label class="govuk-label govuk-checkboxes__label" for="region-impacted-8">
+         Yorkshire & Humber
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+		
+		
+		<!-- checkbox -->
+		
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  
+       Cities in which the project/scheme is impacted
+      
+    </legend>
+    <span id="cities-based-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+	  
+	  
+	  
+    <div class="govuk-checkboxes">
+		
+		<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-1" name="cities-impacted" type="checkbox" value="London">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-1">
+          London
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-2" name="cities-impacted" type="checkbox" value="Leeds">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-2">
+      Leeds
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-3" name="cities-impacted" type="checkbox" value="Bradford">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-3">
+         Bradford
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-4" name="cities-impacted" type="checkbox" value="Liverpool">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-4">
+          Liverpool
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-5" name="cities-impacted" type="checkbox" value="Leicester">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-5">
+       Leicester
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-6" name="cities-impacted" type="checkbox" value="Coventry">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-6">
+   Coventry
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-7" name="cities-impacted" type="checkbox" value="Newcastle upon Tyne">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-7">
+        Newcastle upon Tyne
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-8" name="cities-impacted" type="checkbox" value="Brighton & Hove">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-8">
+         Brighton & Hove
+        </label>
+      </div>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    
+	  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-9" name="cities-impacted" type="checkbox" value="Birmingham">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-9">
+         Birmingham
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-10" name="cities-impacted" type="checkbox" value="Sheffield">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-10">
+         Sheffield
+        </label>
+      </div>
+		
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-11" name="cities-impacted" type="checkbox" value="Manchester">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-11">
+       Manchester
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-12" name="cities-impacted" type="checkbox" value="Bristol">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-12">
+      Bristol
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-13" name="cities-impacted" type="checkbox" value="Wakefield">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-13">
+      Wakefield
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-14" name="cities-impacted" type="checkbox" value="Nottingham">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-14">
+       Nottingham
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-14" name="cities-impacted" type="checkbox" value="Sunderland">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-14">
+       Sunderland
+        </label>
+      </div>
+		
+		<div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="cities-impacted" type="checkbox" value="others" data-aria-controls="conditional-citizenship-conditional-1">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+          Others
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            Please specify
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="cities-impacted-others" type="email">
+        </div>
+	  
+  </div>
+</div>
+		
+		
+     
+		
+
+    </div>
+  </fieldset>
+</div>
+		
+<!-- checkbox -->
+		
+		<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  
+       Cities in which the project/scheme is based
+      
+    </legend>
+    <span id="cities-based-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes">
+		
+		<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+     <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-1" name="cities-based" type="checkbox" value="London">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-1">
+          London
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-2" name="cities-based" type="checkbox" value="Leeds">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-2">
+      Leeds
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-3" name="cities-based" type="checkbox" value="Bradford">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-3">
+         Bradford
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-4" name="cities-based" type="checkbox" value="Liverpool">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-4">
+          Liverpool
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-5" name="cities-based" type="checkbox" value="Leicester">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-5">
+       Leicester
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-6" name="cities-based" type="checkbox" value="Coventry">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-6">
+   Coventry
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-7" name="cities-based" type="checkbox" value="Newcastle upon Tyne">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-7">
+        Newcastle upon Tyne
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-8" name="cities-based" type="checkbox" value="Brighton & Hove">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-8">
+         Brighton & Hove
+        </label>
+      </div>
+  </div>
+  <div class="govuk-grid-column-one-half">
+  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-9" name="cities-based" type="checkbox" value="Birmingham">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-9">
+         Birmingham
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-10" name="cities-based" type="checkbox" value="Sheffield">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-10">
+         Sheffield
+        </label>
+      </div>
+		
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-11" name="cities-based" type="checkbox" value="Manchester">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-11">
+       Manchester
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-12" name="cities-based" type="checkbox" value="Bristol">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-12">
+      Bristol
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-13" name="cities-based" type="checkbox" value="Wakefield">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-13">
+      Wakefield
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-14" name="cities-based" type="checkbox" value="Nottingham">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-14">
+       Nottingham
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-based-14" name="cities-based" type="checkbox" value="Sunderland">
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-14">
+       Sunderland
+        </label>
+      </div>
+		
+		<div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="cities-based" type="checkbox" value="others" data-aria-controls="conditional-citizenship-conditional-1">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+          Others
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            Please specify
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="cities-based-others" type="email">
+        </div>
+
+  </div>
 </div>
 		
 		
 		
+     
 		
-		<!--  Type of Project-->
+    </div>
+  </fieldset>
+</div>
+				
+		<!-- date -->
+		
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+     
+       Opening Year	
+     
+    </legend>
+    <span id="dob-hint" class="govuk-hint">
+      Financial in which the scheme is expected to operational. For example, 2017/18
+    </span>
+    
+      
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+	  
+	  
+	  
+	  <h2  class="govuk-heading-m">Decesion making </h2>
+		
+		
+		<!--  Business Case Stage	-->
 		<div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend ">
 
   
-      Type of project
+     Business Case Stage	
 
     </legend>
+	  
+	  <!--<span id="dob-hint" class="govuk-hint">
+      Business case stage that the project is currently in 
+    </span>-->
     <div class="govuk-radios" data-module="radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="project-type-conditional-1" name="project-type" type="radio" value="Standalone project" {{ checked('project-type','Standalone project') }} data-aria-controls="conditional-project-type-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-1">
-     Standalone project
+        <input class="govuk-radios__input" id="business-case-stage-conditional-1" name="business-case-stage" type="radio" value="Project Initiation/Pre-SOBC" {{ checked('business-case-stage','Project Initiation/Pre-SOBC') }} data-aria-controls="conditional-business-case-stage-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="business-case-stage-conditional-1">
+     Project Initiation/Pre-SOBC
       </label>
       </div>
 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="project-type-conditional-2" name="project-type" type="radio" value="Project within a programme" {{ checked('project-type','Project within a programme') }} data-aria-controls="conditional-project-type-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="child-1-gender-conditional-2">
-       Project within a programme
+        <input class="govuk-radios__input" id="business-case-stage-conditional-2" name="business-case-stage" type="radio" value="SOBC" {{ checked('business-case-stage','SOBC') }} data-aria-controls="conditional-project-type-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="business-case-stage-conditional-2">
+      SOBC
       </label>
       </div>
 		
 		 <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="project-type-conditional-3" name="project-type" type="radio" value="Competitive fund" {{ checked('project-type','Competitive fund') }} data-aria-controls="conditional-project-type-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-3">
-       Competitive fund
+        <input class="govuk-radios__input" id="business-case-stage-conditional-3" name="business-case-stage" type="radio" value="OBC" {{ checked('business-case-stage','OBC') }} data-aria-controls="conditional-business-case-stage-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="business-case-stage-conditional-3">
+      OBC
       </label>
       </div>
 		
 		 <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="project-type-conditional-4" name="project-type" type="radio" value="Grant fund" {{ checked('project-type','Grant fund') }} data-aria-controls="conditional-project-type-conditional-4">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-4">
-   	Grant fund
+        <input class="govuk-radios__input" id="business-case-stage-conditional-4" name="business-case-stage" type="radio" value="FBC" {{ checked('business-case-stage','FBC') }} data-aria-controls="conditional-business-case-stage-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="business-case-stage-conditional-4">
+   	FBC
+      </label>
+      </div>
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="business-case-stage-conditional-5" name="business-case-stage" type="radio" value="Post-FBC" {{ checked('business-case-stage','Post-FBC') }} data-aria-controls="conditional-business-case-stage-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="business-case-stage-conditional-5">
+   	Post-FBC
       </label>
       </div>
 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="project-type-conditional-5" name="project-type" type="radio" value="Others" {{ checked('child-1-gender','Others') }} data-aria-controls="conditional-project-type-conditional-5">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-5">
+        <input class="govuk-radios__input" id="business-case-stageconditional-6" name="business-case-stage" type="radio" value="Others" {{ checked('business-case-stage','Others') }} data-aria-controls="conditional-business-case-stage-conditional-6">
+        <label class="govuk-label govuk-radios__label" for="business-case-stage-conditional-6">
        Others
       </label>
       </div>
-      <div class="govuk-radios__conditional" id="conditional-project-type-conditional-5">
+      <div class="govuk-radios__conditional" id="conditional-business-case-stage-conditional-6">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="project-type-text">
+          <label class="govuk-label" for="business-case-stage-text">
     Please specify
   </label>
-            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="project-type-others" type="text" value="{{ data['project-type-others'] }}">
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="business-case-stage-others" type="text" value="{{ data['business-case-stage-others'] }}">
         </div>
 
       </div>
@@ -218,159 +753,74 @@
   </fieldset>
 </div>
 
-		
-		<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="name-of-programme">
-    <span class="govuk-label---s">  If it is a project that is part of a programme, what is the name of the programme?
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="name-of-programme" name="name-of-programme" type="text" value="{{ data['name-of-programme'] }}">
-</div>
-		<!--  political commitment -->
+			
+			<!--  Business Case Stage	-->
 		<div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend ">
 
-      Has there been a political commitment to undertake this specific project?	
-	
+  
+   Investment Board		
 
     </legend>
+	  
+	  <!--<span id="dob-hint" class="govuk-hint">
+      Business case stage that the project is currently in 
+    </span>-->
     <div class="govuk-radios" data-module="radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-1" name="political-commitment" type="radio" value="Yes, a public announcement has been made about this scheme/project" {{ checked('project-type','Yes, a public announcement has been made about this scheme/project') }} data-aria-controls="conditional-political-commitment-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-1">
-   Yes, a public announcement has been made about this scheme/project
+        <input class="govuk-radios__input" id="investment-board-conditional-1" name="investment-board" type="radio" value="BICC" {{ checked('investment-board','BICC') }} data-aria-controls="conditional-investment-board-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="investment-board-conditional-1">
+    BICC
       </label>
       </div>
 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-2" name="political-commitment" type="radio" value="No, but DfT has publicly committed to doing something to address a key objective of this project" {{ checked('political-commitment','No, but DfT has publicly committed to doing something to address a key objective of this project') }} data-aria-controls="conditional-project-type-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-2">
-    No, but DfT has publicly committed to doing something to address a key objective of this project
+        <input class="govuk-radios__input" id="investment-board-conditional-2" name="investment-board" type="radio" value="RIB" {{ checked('investment-board','RIB') }} data-aria-controls="conditional-investment-board-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="investment-board-conditional-2">
+      RIB
       </label>
       </div>
 		
 		 <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-3" name="political-commitment" type="radio" value="No, there has been no public commitment this project" {{ checked('political-commitment','No, there has been no public commitment this project') }} data-aria-controls="conditional-political-commitment-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-3">
-      No, there has been no public commitment this project 
+        <input class="govuk-radios__input" id="investment-board-conditional-3" name="investment-board" type="radio" value="HSR Group Tier 2 Investment Board" {{ checked('investment-board','HSR Group Tier 2 Investment Board') }} data-aria-controls="conditional-investment-board-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="investment-board-conditional-3">
+     HSR Group Tier 2 Investment Board
       </label>
       </div>
 		
-	
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="investment-board-conditional-4" name="investment-board" type="radio" value="LRTIC" {{ checked('investment-board','LRTIC') }} data-aria-controls="conditional-investment-board-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="investment-board-conditional-4">
+   	LRTIC
+      </label>
+      </div>
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="investment-board-conditional-5" name="investment-board" type="radio" value="R&S Tier 2" {{ checked('investment-board','Post-FBC') }} data-aria-controls="conditional-investment-board-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="investment-board-conditional-5">
+   	R&S Tier 2
+      </label>
+      </div>
+		
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="investment-board-conditional-6" name="investment-board" type="radio" value="ISE" {{ checked('investment-board','ISE') }} data-aria-controls="conditional-investment-board-conditional-6">
+        <label class="govuk-label govuk-radios__label" for="investment-board-conditional-6">
+   	ISE
+      </label>
+      </div>
 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-4" name="political-commitment" type="radio" value="Others" {{ checked('political-commitment','Others') }} data-aria-controls="conditional-political-commitment-conditional-4">
-        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-4">
+        <input class="govuk-radios__input" id="investment-board-conditional-7" name="investment-board" type="radio" value="Others" {{ checked('business-case-stage','Others') }} data-aria-controls="conditional-investment-board-conditional-7">
+        <label class="govuk-label govuk-radios__label" for="business-investment-board-conditional-7">
        Others
       </label>
       </div>
-      <div class="govuk-radios__conditional" id="conditional-political-commitment-conditional-4">
+      <div class="govuk-radios__conditional" id="conditional-investment-board-conditional-7">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="political-commitment-text">
+          <label class="govuk-label" for="investment-board-text">
     Please specify
   </label>
-            <input class="govuk-input govuk-!-width-one-third" id="political-commitment-text" name="political-commitment-others" type="text" value="{{ data['political-commitment-others'] }}">
-        </div>
-
-      </div>
-    </div>
-  </fieldset>
-</div>
-
-		<!--  agreed with minister -->
-		<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend ">
-
-      Is the project/activity part of current policy assumptions that have been agreed with Ministers? 	
-	
-	
-
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="agreed-with-minister-conditional-1" name="agreed-with-minister" type="radio" value="Yes" {{ checked('agreed-with-minister','Yes') }} data-aria-controls="conditional-political-commitment-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="agreed-with-minister-conditional-1">
-   Yes
-      </label>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="agreed-with-minister-conditional-2" name="agreed-with-minister" type="radio" value="No" {{ checked('agreed-with-minister','No') }} data-aria-controls="conditional-agreed-with-minister-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="agreed-with-minister-conditional-2">
-    No 
-      </label>
-      </div>
-		
-		
-		
-	
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="agreed-with-minister-conditional-3" name="agreed-with-minister" type="radio" value="Others" {{ checked('agreed-with-minister','Others') }} data-aria-controls="conditional-agreed-with-minister-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="agreed-with-minister-conditional-3">
-       Others
-      </label>
-      </div>
-      <div class="govuk-radios__conditional" id="conditional-agreed-with-minister-conditional-3">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="agreed-with-minister-text">
-    Please specify
-  </label>
-            <input class="govuk-input govuk-!-width-one-third" id="agreed-with-minister-text" name="agreed-with-minister-others" type="text" value="{{ data['agreed-with-minister-others'] }}">
-        </div>
-
-      </div>
-    </div>
-  </fieldset>
-</div>
-		
-		
-		<!--  long term funding -->
-		<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend ">
-
-      Was there a Long-term funding commitment at SR15?	
-		
-	
-	
-
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="long-term-funding-conditional-1" name="long-term-funding" type="radio" value="Yes" {{ checked('long-term-funding','Yes') }} data-aria-controls="conditional-long-term-funding-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="along-term-funding-conditional-1">
-   Yes
-      </label>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="long-term-funding-conditional-2" name="long-term-funding" type="radio" value="No" {{ checked('long-term-funding','No') }} data-aria-controls="conditional-long-term-funding-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="long-term-funding-conditional-2">
-    No 
-      </label>
-      </div>
-		
-		
-		
-	
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="long-term-funding-conditional-3" name="long-term-funding" type="radio" value="Others" {{ checked('long-term-funding','Others') }} data-aria-controls="conditional-long-term-funding-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="long-term-funding-conditional-3">
-       Others
-      </label>
-      </div>
-      <div class="govuk-radios__conditional" id="conditional-long-term-funding-conditional-3">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="long-term-funding-text">
-    Please specify
-  </label>
-            <input class="govuk-input govuk-!-width-one-third" id="long-term-funding-text" name="long-term-funding-others" type="text" value="{{ data['long-term-funding-others'] }}">
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="investment-board-others" type="text" value="{{ data['investment-board-others'] }}">
         </div>
 
       </div>
@@ -380,116 +830,6 @@
 
 		
 		
-		<h2  class="govuk-heading-m">Key contacts</h2>
-	
-		<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="Senior-Responsible-Owner	">
-    <span class="govuk-label---s">  Senior Responsible Owner	
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="senior-responsible-owner" name="senior-responsible-owner" type="text" value="{{ data['senior-responsible-owner'] }}">
-</div>
-		
-			<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="project-manager">
-    <span class="govuk-label---s">  Project Manager
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="project-manager" name="project-manager" type="text" value="{{ data['project-manager'] }}">
-</div>
-			<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="senior-analytical-lead">
-    <span class="govuk-label---s">  Senior Analytical Lead
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="senior-analytical-lead" name="senior-analytical-lead" type="text" value="{{ data['senior-analytical-lead'] }}">
-</div>
-		
-		<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="analytical-lead">
-    <span class="govuk-label---s">  Analytical Lead
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="analytical-lead" name="analytical-lead" type="text" value="{{ data['analytical-lead'] }}">
-</div>
-		
-		<!-- Input feild-->
-		
-		<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="policy-lead">
-    <span class="govuk-label---s">  Policy Lead
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="analytical-lead" name="policy-lead" type="text" value="{{ data['policy-lead'] }}">
-</div>
-		
-      	<!-- Input feild-->
-		
-		<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="SCS-Signing-off-data">
-    <span class="govuk-label---s"> SCS Signing off data
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="SCS-Signing-off-data" name="SCS-Signing-off-data" type="text" value="{{ data['SCS-Signing-off-data'] }}">
-</div>
-		
-		<!--  nominated SCS -->
-		<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend ">
-
-      Has this project been signed off by the nominated SCS?	
-	
-		
-	
-	
-
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="nominated-SCS-conditional-1" name="nominated-SCS" type="radio" value="Yes" {{ checked('nominated-SCS','Yes') }} data-aria-controls="conditional-nominated-SCS-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="nominated-SCS-conditional-1">
-   Yes
-      </label>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="nominated-SCS-conditional-2" name="nominated-SCS" type="radio" value="No" {{ checked('nominated-SCS','No') }} data-aria-controls="conditional-nominated-SCS-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="nominated-SCS-conditional-2">
-    No 
-      </label>
-      </div>
-		
-		
-		
-	
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="nominated-SCS-conditional-3" name="nominated-SCS" type="radio" value="Others" {{ checked('nominated-SCS','Others') }} data-aria-controls="conditional-nominated-SCS-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="nominated-SCS-conditional-3">
-       Others
-      </label>
-      </div>
-      <div class="govuk-radios__conditional" id="conditional-nominated-SCS-conditional-3">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="nominated-SCS-text">
-    Please specify
-  </label>
-            <input class="govuk-input govuk-!-width-one-third" id="nominated-SCS-text" name="nominated-SCS-others" type="text" value="{{ data['nominated-SCS-others'] }}">
-        </div>
-
-      </div>
-    </div>
-  </fieldset>
-</div>
 		
 		
 		

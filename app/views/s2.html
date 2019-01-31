@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Apply for a care, supervision or emergency protection order
+  Value for Money (VfM) Database and Data Collection Tool
 {% endblock %}
 
 {% block header %}
@@ -72,7 +72,8 @@
 											
       </h1>
 										 
-										
+				<h2 class="govuk-heading-m">Project details</h2>
+		<!--  textarea -->
 		<div class="govuk-form-group">
           <label class="govuk-label" for="scheme-description">
    Scheme Description (max 200 characters)	
@@ -81,61 +82,68 @@
     <textarea class="govuk-textarea govuk-!-width-two-thirds" id="scheme-description" name="scheme-description" rows="3" aria-describedby="scheme-description-hint">{{ data['scheme-description'] }}</textarea>
         </div>
 		
-		
-		
-<div class="govuk-form-group">
-  <label class="govuk-label" for="project-name">
-    Project Name
-  </label>
-  <span id="project-name-hint" class="govuk-hint">
-    Each discrete proposal for a project should be named. Names should be used consistently throughout SR material. <!--short,  should be clear and avoid unnecessary jargon. -->
-  </span>
-  <input class="govuk-input govuk-input--width-20" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
-</div>
-		
-		<!--<p>Date added: 03/10/2018</p>
-		<p>Last updated: 30/01/2019</p>-->
-     
-
-     <h2  class="govuk-heading-m">Project Management</h2>
-
+		<!--  Geographic coverage	 -->
 		<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
-    Group
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+
+      Geographic coverage	
+	
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="geographic-coverage-conditional-1" name="geographic-coverage" type="radio" value="National" {{ checked('geographic-coverage','National') }} data-aria-controls="conditional-geographic-coverage-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="geographic-coverage-conditional-1">
+   National 
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="geographic-coverage-conditional-2" name="geographic-coverage" type="radio" value="Regional" {{ checked('geographic-coverage','Regional') }} data-aria-controls="conditional-geographic-coverage-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="geographic-coverage-conditional-2">
+   Regional 
+      </label>
+      </div>
+		
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="geographic-coverage-conditional-3" name="geographic-coverage" type="radio" value="Multi Regional" {{ checked('geographic-coverage','Multi Regional') }} data-aria-controls="conditional-geographic-coverage-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="geographic-coverage-conditional-3">
+      Multi Regional
+      </label>
+      </div>
+		
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="geographic-coverage-conditional-4" name="geographic-coverage" type="radio" value="Local" {{ checked('geographic-coverage','Local') }} data-aria-controls="conditional-geographic-coverage-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="geographic-coverage-conditional-4">
+      Local 
+      </label>
+      </div>
+		
+	
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="geographic-coverage-conditional-5" name="geographic-coverage" type="radio" value="Others" {{ checked('geographic-coverage','Others') }} data-aria-controls="conditional-geographic-coverage-conditional-5">
+        <label class="govuk-label govuk-radios__label" for="geographic-coverage-conditional-5">
+       Others
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-geographic-coverage-conditional-5">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="geographic-coverage-text">
+    Please specify
   </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="published">DfT Group 1 </option>
-    <option value="updated" selected>DfT Group 2 </option>
-    <option value="views">DfT Group 3 </option>
-    <option value="comments">DfT Group 4 </option>
-  </select>
+            <input class="govuk-input govuk-!-width-one-third" id="geographic-coverage-text" name="geographic-coverage-others" type="text" value="{{ data['geographic-coverage-others'] }}">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
 </div>
 		
 	
 
-		<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
- Directorate	
-  </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="published">DfT Group 1 </option>
-    <option value="updated" selected>DfT Group 2 </option>
-    <option value="views">DfT Group 3 </option>
-    <option value="comments">DfT Group 4 </option>
-  </select>
-</div>
-		
-	<!--		<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
- Type of project 	
-  </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="published">DfT Group 1 </option>
-    <option value="updated" selected>DfT Group 2 </option>
-    <option value="views">DfT Group 3 </option>
-    <option value="comments">DfT Group 4 </option>
-  </select>
-</div>-->  
+	
 		
 		<!-- Input feild-->
 
@@ -216,57 +224,7 @@
   </label>
   <input class="govuk-input govuk-!-width-one-half" id="name-of-programme" name="name-of-programme" type="text" value="{{ data['name-of-programme'] }}">
 </div>
-		<!--  political commitment -->
-		<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend ">
-
-      Has there been a political commitment to undertake this specific project?	
-	
-
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-1" name="political-commitment" type="radio" value="Yes, a public announcement has been made about this scheme/project" {{ checked('project-type','Yes, a public announcement has been made about this scheme/project') }} data-aria-controls="conditional-political-commitment-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-1">
-   Yes, a public announcement has been made about this scheme/project
-      </label>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-2" name="political-commitment" type="radio" value="No, but DfT has publicly committed to doing something to address a key objective of this project" {{ checked('political-commitment','No, but DfT has publicly committed to doing something to address a key objective of this project') }} data-aria-controls="conditional-project-type-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-2">
-    No, but DfT has publicly committed to doing something to address a key objective of this project
-      </label>
-      </div>
 		
-		 <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-3" name="political-commitment" type="radio" value="No, there has been no public commitment this project" {{ checked('political-commitment','No, there has been no public commitment this project') }} data-aria-controls="conditional-political-commitment-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-3">
-      No, there has been no public commitment this project 
-      </label>
-      </div>
-		
-	
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-4" name="political-commitment" type="radio" value="Others" {{ checked('political-commitment','Others') }} data-aria-controls="conditional-political-commitment-conditional-4">
-        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-4">
-       Others
-      </label>
-      </div>
-      <div class="govuk-radios__conditional" id="conditional-political-commitment-conditional-4">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="political-commitment-text">
-    Please specify
-  </label>
-            <input class="govuk-input govuk-!-width-one-third" id="political-commitment-text" name="political-commitment-others" type="text" value="{{ data['political-commitment-others'] }}">
-        </div>
-
-      </div>
-    </div>
-  </fieldset>
-</div>
 
 		<!--  agreed with minister -->
 		<div class="govuk-form-group">
