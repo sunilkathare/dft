@@ -81,10 +81,10 @@
 		
 <div class="govuk-form-group">
   <label class="govuk-label" for="project-name">
-    Project Name
+    Project name
   </label>
   <span id="project-name-hint" class="govuk-hint">
-    Each discrete proposal for a project should be named. Names should be used consistently throughout SR material short,  should be clear and avoid unnecessary jargon. For example, AAA1
+    Each discrete proposal for a project should be named. Names should be used consistently throughout SR material, should be short, clear and avoid unnecessary jargon. For example, AAA1
   </span>
 	
 	<input class="govuk-input govuk-!-width-one-half" id="project-name" name="project-name" type="text" value="{{ data['project-name'] }}">
@@ -482,6 +482,19 @@ and Northern Powerhouse Rail </option>
 </div>
 		
 		
+		<h2  class="govuk-heading-m">Strategic alignment</h2>
+			
+			
+			<!--  textarea -->
+		<div class="govuk-form-group">
+          <label class="govuk-label" for="scheme-description">
+   What are the main strategic objectives of the project?
+(max 400 characters)
+		
+	
+  </label>
+    <textarea class="govuk-textarea govuk-!-width-two-thirds" id="strategic-objectives" name="strategic-objectives" rows="3" aria-describedby="strategic-objectives-hint">{{ data['strategic-objectives'] }}</textarea>
+        </div>
 		
 		
 		<button type="submit" class="govuk-button">
