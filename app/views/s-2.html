@@ -14,50 +14,50 @@
 <nav role="navigation" class="progress-indicator reveal">
     <ol>
          <li class="inactive">
-                <a data-nav-position="1 of 8: " href="s-1.html">
+                <a data-nav-position="1 of 8: " href="s-1.html?change=false">
                     Section 1
                     <span class="visuallyhidden"> - current step</span>
                 </a>
             </li>   
 		
 		<li class="current">
-                <a data-nav-position="2 of 8: " href="s-2.html">
+                <a data-nav-position="2 of 8: " href="s-2.html?change=false">
                     Section 2
                     <span class="visuallyhidden"> - current step</span>
                 </a>
             </li>
             <li class="inactive">
-                <a data-nav-position="3 of 8: " href="s-3.html">
+                <a data-nav-position="3 of 8: " href="s-3.html?change=false">
                     Section 3
                     
                 </a>
             </li>
             <li class="inactive">
-                <a data-nav-position="4 of 8: " href="s-4.html">
+                <a data-nav-position="4 of 8: " href="s-4.html?change=false">
                     Section 4
                     
                 </a>
             </li>
             <li class="inactive">
-                <a data-nav-position="5 of 8: " href="s-5.html">
+                <a data-nav-position="5 of 8: " href="s-5.html?change=false">
                     Section 5
                     
                 </a>
             </li>
 		<li class="inactive">
-                <a data-nav-position="5 of 8: " href="s-6.html">
+                <a data-nav-position="5 of 8: " href="s-6.html?change=false">
                     Section 6
                     
                 </a>
             </li>
 		<li class="inactive">
-                <a data-nav-position="5 of 8: " href="s-7.html">
+                <a data-nav-position="5 of 8: " href="s-7.html?change=false">
                     Section 7
                     
                 </a>
             </li>
 		 <li class="inactive">
-                <a data-nav-position="6 of 8: " href="s-8.html">
+                <a data-nav-position="6 of 8: " href="s-8.html?change=false">
                     Review
                     
                 </a>
@@ -66,7 +66,15 @@
         <li class="show-all"><a style="visibility: visible;">Show all steps</a></li>
     </ol>
 </nav>
-<form action="s-3.html">
+		{% if data['change'] == "true" %}
+		  <form action="s-8#s2">
+
+    {% else %}
+
+    	<form action="s-3.html">
+    {% endif %}
+
+
       <h1 class="govuk-heading-l">
 		   <!--<span class="govuk-caption-xl">  Department for transport</span>-->
        Section 2: Project details and decision making												
