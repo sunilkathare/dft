@@ -253,49 +253,49 @@
     </span>
     <div class="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-based-1" name="region-based" type="checkbox" value="Esat Midlands">
+        <input class="govuk-checkboxes__input" id="region-based-1" name="region-based" type="checkbox" value="East Midlands" {{ checked('region-based','East Midlands') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-based-1">
-          Esat Midlands
+          East Midlands
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-based-2" name="region-based" type="checkbox" value="London">
+        <input class="govuk-checkboxes__input" id="region-based-2" name="region-based" type="checkbox" value="London" {{ checked('region-based','London') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-based-2">
           London
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="North west">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="North west" {{ checked('region-based','North west') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
           North west
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="South West">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="South West" {{ checked('region-based','South West') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
           South West
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="Eastern England">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="Eastern England" {{ checked('region-based','Eastern England') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
         Eastern England
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="North East">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="North East" {{ checked('region-based','North East') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
        North East
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="South East">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="South East" {{ checked('region-based','South East') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
          South East
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="Yorkshire & Humber">
+        <input class="govuk-checkboxes__input" id="region-based-3" name="region-based" type="checkbox" value="Yorkshire & Humber" {{ checked('region-based','Yorkshire & Humber') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-based-3">
          Yorkshire & Humber
         </label>
@@ -314,54 +314,61 @@
        Region in which the project/scheme is impacted
       
     </legend>
-    <span id="region-based-hint" class="govuk-hint">
+    <span id="region-impacted-hint" class="govuk-hint">
       Select all that apply.
     </span>
+	  <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="region-impacted-1" name="region-impacted" type="checkbox" value="All of UK" {{ checked('region-impacted','All of UK') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="region-impacted-1">
+         All of UK
+        </label>
+      </div>
     <div class="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-impacted-1" name="region-impacted" type="checkbox" value="East Midlands">
+        <input class="govuk-checkboxes__input" id="region-impacted-1" name="region-impacted" type="checkbox" value="East Midlands" {{ checked('region-impacted','East Midlands') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-impacted-1">
           Esat Midlands
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-impacted-2" name="region-impacted" type="checkbox" value="London">
+        <input class="govuk-checkboxes__input" id="region-impacted-2" name="region-impacted" type="checkbox" value="London" {{ checked('region-impacted','London') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-impacted-2">
           London
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-impacted-3" name="region-impacted" type="checkbox" value="North west">
+        <input class="govuk-checkboxes__input" id="region-impacted-3" name="region-impacted" type="checkbox" value="North west"  {{ checked('region-impacted','North west') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-impacted-3">
           North west
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-based-4" name="region-impacted" type="checkbox" value="South West">
+        <input class="govuk-checkboxes__input" id="region-based-4" name="region-impacted" type="checkbox" value="South West" {{ checked('region-impacted','South West') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-impacted-4">
           South West
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-impacted-5" name="region-impacted" type="checkbox" value="Eastern England">
+        <input class="govuk-checkboxes__input" id="region-impacted-5" name="region-impacted" type="checkbox" value="Eastern England" {{ checked('region-impacted','Eastern England') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-impacted-5">
         Eastern England
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-impacted-6" name="region-impacted" type="checkbox" value="North East">
+        <input class="govuk-checkboxes__input" id="region-impacted-6" name="region-impacted" type="checkbox" value="North East" {{ checked('region-impacted','North East') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-impacted-6">
        North East
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-impacted-7" name="region-impacted" type="checkbox" value="South East">
+        <input class="govuk-checkboxes__input" id="region-impacted-7" name="region-impacted" type="checkbox" value="South East" {{ checked('region-impacted','South East') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-impacted-7">
          South East
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="region-impacted-8" name="region-impacted" type="checkbox" value="Yorkshire & Humber">
+        <input class="govuk-checkboxes__input" id="region-impacted-8" name="region-impacted" type="checkbox" value="Yorkshire & Humber" {{ checked('region-impacted','Yorkshire & Humber') }}>
         <label class="govuk-label govuk-checkboxes__label" for="region-impacted-8">
          Yorkshire & Humber
         </label>
@@ -390,50 +397,56 @@
 		
 		<div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
+	  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="cities-impacted-1" name="cities-impacted" type="checkbox" value="All of UK" {{ checked('cities-impacted','All of UK') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-1">
+          All of UK
+        </label>
+      </div>
     <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-1" name="cities-impacted" type="checkbox" value="London">
+        <input class="govuk-checkboxes__input" id="cities-impacted-1" name="cities-impacted" type="checkbox" value="London" {{ checked('cities-impacted','London') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-1">
           London
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-2" name="cities-impacted" type="checkbox" value="Leeds">
+        <input class="govuk-checkboxes__input" id="cities-impacted-2" name="cities-impacted" type="checkbox" value="Leeds" {{ checked('cities-impacted','Leeds') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-2">
       Leeds
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-3" name="cities-impacted" type="checkbox" value="Bradford">
+        <input class="govuk-checkboxes__input" id="cities-impacted-3" name="cities-impacted" type="checkbox" value="Bradford" {{ checked('cities-impacted','Beadford') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-3">
          Bradford
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-4" name="cities-impacted" type="checkbox" value="Liverpool">
+        <input class="govuk-checkboxes__input" id="cities-based-4" name="cities-impacted" type="checkbox" value="Liverpool" {{ checked('cities-impacted','Liverpool') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-4">
           Liverpool
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-5" name="cities-impacted" type="checkbox" value="Leicester">
+        <input class="govuk-checkboxes__input" id="cities-impacted-5" name="cities-impacted" type="checkbox" value="Leicester" {{ checked('cities-impacted','Leicester') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-5">
        Leicester
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-6" name="cities-impacted" type="checkbox" value="Coventry">
+        <input class="govuk-checkboxes__input" id="cities-impacted-6" name="cities-impacted" type="checkbox" value="Coventry" {{ checked('cities-impacted','Coventry') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-6">
    Coventry
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-7" name="cities-impacted" type="checkbox" value="Newcastle upon Tyne">
+        <input class="govuk-checkboxes__input" id="cities-impacted-7" name="cities-impacted" type="checkbox" value="Newcastle upon Tyne" {{ checked('cities-impacted','Newcastle upon Tyne') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-7">
         Newcastle upon Tyne
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-8" name="cities-impacted" type="checkbox" value="Brighton & Hove">
+        <input class="govuk-checkboxes__input" id="cities-impacted-8" name="cities-impacted" type="checkbox" value="Brighton & Hove" {{ checked('cities-impacted','Brighton & Hove') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-8">
          Brighton & Hove
         </label>
@@ -442,44 +455,44 @@
   <div class="govuk-grid-column-one-half">
     
 	  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-9" name="cities-impacted" type="checkbox" value="Birmingham">
+        <input class="govuk-checkboxes__input" id="cities-impacted-9" name="cities-impacted" type="checkbox" value="Birmingham" {{ checked('cities-impacted','Birmingham') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-9">
          Birmingham
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-10" name="cities-impacted" type="checkbox" value="Sheffield">
+        <input class="govuk-checkboxes__input" id="cities-impacted-10" name="cities-impacted" type="checkbox" value="Sheffield" {{ checked('cities-impacted','Sheffield') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-10">
          Sheffield
         </label>
       </div>
 		
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-11" name="cities-impacted" type="checkbox" value="Manchester">
+        <input class="govuk-checkboxes__input" id="cities-impacted-11" name="cities-impacted" type="checkbox" value="Manchester" {{ checked('cities-impacted','Manchester') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-11">
        Manchester
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-12" name="cities-impacted" type="checkbox" value="Bristol">
+        <input class="govuk-checkboxes__input" id="cities-impacted-12" name="cities-impacted" type="checkbox" value="Bristol" {{ checked('cities-impacted','Bristol') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-12">
       Bristol
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-13" name="cities-impacted" type="checkbox" value="Wakefield">
+        <input class="govuk-checkboxes__input" id="cities-impacted-13" name="cities-impacted" type="checkbox" value="Wakefield" {{ checked('cities-impacted','Wakefield') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-13">
       Wakefield
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-14" name="cities-impacted" type="checkbox" value="Nottingham">
+        <input class="govuk-checkboxes__input" id="cities-impacted-14" name="cities-impacted" type="checkbox" value="Nottingham" {{ checked('cities-impacted','Nottingham') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-14">
        Nottingham
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-impacted-14" name="cities-impacted" type="checkbox" value="Sunderland">
+        <input class="govuk-checkboxes__input" id="cities-impacted-14" name="cities-impacted" type="checkbox" value="Sunderland" {{ checked('cities-impacted','Sunderland') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-14">
        Sunderland
         </label>
@@ -487,17 +500,17 @@
 		
 		<div class="govuk-checkboxes" data-module="checkboxes">
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="cities-impacted" type="checkbox" value="others" data-aria-controls="conditional-citizenship-conditional-1">
-        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+        <input class="govuk-checkboxes__input" id="cities-impacted-conditional-1" name="cities-impacted" type="checkbox" value="Others" data-aria-controls="conditional-cities-impacted-conditional-1" {{ checked('cities-impacted','Others') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-conditional-1">
           Others
         </label>
       </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-cities-impacted-conditional-1">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-email">
+          <label class="govuk-label" for="cities-impacted">
             Please specify
           </label>
-          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="cities-impacted-others" type="email">
+          <input class="govuk-input govuk-!-width-one-third" id="cities-impacted-others" name="cities-impacted-others" type="text" value="{{ data['cities-impacted-others'] }}">
         </div>
 	  
   </div>
@@ -528,49 +541,49 @@
 		<div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-1" name="cities-based" type="checkbox" value="London">
+        <input class="govuk-checkboxes__input" id="cities-based-1" name="cities-based" type="checkbox" value="London" {{ checked('cities-based','London') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-1">
           London
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-2" name="cities-based" type="checkbox" value="Leeds">
+        <input class="govuk-checkboxes__input" id="cities-based-2" name="cities-based" type="checkbox" value="Leeds" {{ checked('cities-based','Leeds') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-impacted-2">
       Leeds
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-3" name="cities-based" type="checkbox" value="Bradford">
+        <input class="govuk-checkboxes__input" id="cities-based-3" name="cities-based" type="checkbox" value="Bradford" {{ checked('cities-based','Bradford') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-3">
          Bradford
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-4" name="cities-based" type="checkbox" value="Liverpool">
+        <input class="govuk-checkboxes__input" id="cities-based-4" name="cities-based" type="checkbox" value="Liverpool" {{ checked('cities-based','Liverpool') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-4">
           Liverpool
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-5" name="cities-based" type="checkbox" value="Leicester">
+        <input class="govuk-checkboxes__input" id="cities-based-5" name="cities-based" type="checkbox" value="Leicester" {{ checked('cities-based','Leicester') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-5">
        Leicester
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-6" name="cities-based" type="checkbox" value="Coventry">
+        <input class="govuk-checkboxes__input" id="cities-based-6" name="cities-based" type="checkbox" value="Coventry" {{ checked('cities-based','Coventry') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-6">
    Coventry
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-7" name="cities-based" type="checkbox" value="Newcastle upon Tyne">
+        <input class="govuk-checkboxes__input" id="cities-based-7" name="cities-based" type="checkbox" value="Newcastle upon Tyne" {{ checked('cities-based','Newcastle upon Tyne') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-7">
         Newcastle upon Tyne
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-8" name="cities-based" type="checkbox" value="Brighton & Hove">
+        <input class="govuk-checkboxes__input" id="cities-based-8" name="cities-based" type="checkbox" value="Brighton & Hove" {{ checked('cities-based','Brighton & Hove') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-8">
          Brighton & Hove
         </label>
@@ -578,44 +591,44 @@
   </div>
   <div class="govuk-grid-column-one-half">
   <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-9" name="cities-based" type="checkbox" value="Birmingham">
+        <input class="govuk-checkboxes__input" id="cities-based-9" name="cities-based" type="checkbox" value="Birmingham" {{ checked('cities-based','Birmingham') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-9">
          Birmingham
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-10" name="cities-based" type="checkbox" value="Sheffield">
+        <input class="govuk-checkboxes__input" id="cities-based-10" name="cities-based" type="checkbox" value="Sheffield" {{ checked('cities-based','Sheffield') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-10">
          Sheffield
         </label>
       </div>
 		
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-11" name="cities-based" type="checkbox" value="Manchester">
+        <input class="govuk-checkboxes__input" id="cities-based-11" name="cities-based" type="checkbox" value="Manchester" {{ checked('cities-based','Manchester') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-11">
        Manchester
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-12" name="cities-based" type="checkbox" value="Bristol">
+        <input class="govuk-checkboxes__input" id="cities-based-12" name="cities-based" type="checkbox" value="Bristol"  {{ checked('cities-based','Bristol') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-12">
       Bristol
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-13" name="cities-based" type="checkbox" value="Wakefield">
+        <input class="govuk-checkboxes__input" id="cities-based-13" name="cities-based" type="checkbox" value="Wakefield" {{ checked('cities-based','Wakefield') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-13">
       Wakefield
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-14" name="cities-based" type="checkbox" value="Nottingham">
+        <input class="govuk-checkboxes__input" id="cities-based-14" name="cities-based" type="checkbox" value="Nottingham" {{ checked('cities-based','Nottingham') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-14">
        Nottingham
         </label>
       </div>
 		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="cities-based-14" name="cities-based" type="checkbox" value="Sunderland">
+        <input class="govuk-checkboxes__input" id="cities-based-14" name="cities-based" type="checkbox" value="Sunderland" {{ checked('cities-based','Sunderland') }}>
         <label class="govuk-label govuk-checkboxes__label" for="cities-based-14">
        Sunderland
         </label>
@@ -623,17 +636,17 @@
 		
 		<div class="govuk-checkboxes" data-module="checkboxes">
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="cities-based" type="checkbox" value="others" data-aria-controls="conditional-citizenship-conditional-1">
-        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+        <input class="govuk-checkboxes__input" id="cities-based-conditional-1" name="cities-based" type="checkbox" value="Others" data-aria-controls="conditional-cities-based-conditional-1" {{ checked('cities-based','Others') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="cities-based-conditional-1">
           Others
         </label>
       </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-cities-based-conditional-1">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-email">
+          <label class="govuk-label" for="cities-based-others">
             Please specify
           </label>
-          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="cities-based-others" type="email">
+          <input class="govuk-input govuk-!-width-one-third" id="cities-based-others" name="cities-based-others"  type="text" value="{{ data['cities-based-others'] }}">
         </div>
 
   </div>
@@ -656,17 +669,17 @@
        Opening Year	
      
     </legend>
-    <span id="dob-hint" class="govuk-hint">
+    <span id="opening-year-hint" class="govuk-hint">
       Financial in which the scheme is expected to operational. For example, 2017/18
     </span>
     
       
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="dob-year">
+          <label class="govuk-label govuk-date-input__label" for="opening-year">
             
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+          <input class="govuk-input govuk-!-width-one-half" id="opening-year" name="opening-year" type="text" value="{{ data['opening-year'] }}">
         </div>
       </div>
     </div>
@@ -833,18 +846,18 @@
     
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="dob-month">
+          <label class="govuk-label govuk-date-input__label" for="nbu-month">
             Month
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="nbu-month" name="nbu-month" type="text" value="{{ data['nbu-month'] }}" >
         </div>
       </div>
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="dob-year">
+          <label class="govuk-label govuk-date-input__label" for="nbu-year">
             Year
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="nbu-year" name="nbu-year" type="text" value="{{ data['nbu-year'] }}">
         </div>
       </div>
     </div>
