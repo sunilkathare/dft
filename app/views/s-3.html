@@ -113,40 +113,237 @@
   <label class="govuk-label" for="width-5">
     2019/20
   </label>
-  <input class="govuk-input govuk-input--width-5" id="cdel-costs" name="cdel-costs" type="text">
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-19" name="cdel-costs-19" type="text"  value="{{ data['cdel-costs-19'] }}">
 </div>
 			
 				<div class="govuk-form-group">
   <label class="govuk-label" for="width-5">
     2020/21
   </label>
-  <input class="govuk-input govuk-input--width-5" id="cdel-costs" name="cdel-costs" type="text">
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-20" name="cdel-costs-20" type="text" value="{{ data['cdel-costs-20'] }}">
 </div>
 			
 				<div class="govuk-form-group">
   <label class="govuk-label" for="width-5">
     2021/22
   </label>
-  <input class="govuk-input govuk-input--width-5" id="cdel-costs" name="cdel-costs" type="text">
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-21" name="cdel-costs-21" type="text" value="{{ data['cdel-costs-21'] }}">
 </div>
 		
 					<div class="govuk-form-group">
   <label class="govuk-label" for="width-5">
     2022/23
   </label>
-  <input class="govuk-input govuk-input--width-5" id="cdel-costs" name="cdel-costs" type="text">
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-22" name="cdel-costs-22" type="text" value="{{ data['cdel-costs-22'] }}">
 </div>
 		
 			<div class="govuk-form-group">
   <label class="govuk-label" for="width-5">
     2023/24
   </label>
-  <input class="govuk-input govuk-input--width-5" id="cdel-costs" name="cdel-costs" type="text">
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-23" name="cdel-costs-23" type="text" value="{{ data['cdel-costs-23'] }}">
 </div>
 		
+<h3 class="govuk-heading-m"> CDEL (£m) required beyond 23/24  (split by financial year) </h3>
+			<span id="changed-name-hint" class="govuk-hint">
+     Where a project will not be completed by the end of 2023-24, the CDEL necessary to complete the proposal in years after 20123-24 should be shown. It is not necessary to show the future costs of ongoing programmes (such a maintenance).
+    </span>
+			<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    2024/25
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-24" name="cdel-costs-24" type="text"  value="{{ data['cdel-costs-14'] }}">
+</div>
+			
+				<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    2025/26
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-25" name="cdel-costs-25" type="text" value="{{ data['cdel-costs-25'] }}">
+</div>
+			
+				<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    2026/27
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-26" name="cdel-costs-26" type="text" value="{{ data['cdel-costs-26'] }}">
+</div>
+		
+					<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    2027/28
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-27" name="cdel-costs-27" type="text" value="{{ data['cdel-costs-27'] }}">
+</div>
+		
+			<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    2028/29
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-28" name="cdel-costs-28" type="text" value="{{ data['cdel-costs-28'] }}">
+</div>
+			
+			<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInput(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "<h2 class='govuk-heading-s'>Please note that in the real online application you will be able to add more dates. This prototype is for demo purpose only.</h2><div class='govuk-form-group'></div><label class='govuk-label' > 2029/30 </label> <input type='text' class='govuk-input govuk-input--width-5' id='cdel-costs-29'> <br/><br/>";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+
+<!--<form method="POST">-->
+     <div id="dynamicInput">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="govuk-button" value="Add another" onClick="addInput('dynamicInput');">
+
 			
 			
 			
+			
+			
+					
+<h3 class="govuk-heading-m"> Costs RDEL (£m) programme (split by financial year, 19/20 onwards) </h3>
+			<span id="changed-name-hint" class="govuk-hint">
+     Set out any supporting Resources DEL or AME costs or savings that result from the proposal by financial year. A -ve number represents a saving to the Exchequer, and a +ve number represents a cost to the Exchequer. All figures should exclude depreciation.
+    </span>
+			<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    2024/25
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="cdel-costs-24" name="cdel-costs-24" type="text"  value="{{ data['cdel-costs-14'] }}">
+</div>
+			
+				<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    2019/20
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="rdel-costs-19" name="rdel-costs-19" type="text" value="{{ data['rdel-costs-19'] }}">
+</div>
+			
+				<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    2026/27
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="rdel-costs-20" name="rdel-costs-20" type="text" value="{{ data['rdel-costs-20'] }}">
+</div>
+		
+					<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    2027/28
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="rdel-costs-22" name="rdel-costs-22" type="text" value="{{ data['rdel-costs-22'] }}">
+</div>
+		
+			<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    2028/29
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="rdel-costs-23" name="rdel-costs-23" type="text" value="{{ data['rdel-costs-23'] }}">
+</div>
+			
+			<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInputB(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "<h2 class='govuk-heading-s'>Please note that in the real online application you will be able to add more dates. This prototype is for demo purpose only.</h2><div class='govuk-form-group'></div><label class='govuk-label' > 2024/25 </label> <input type='text' class='govuk-input govuk-input--width-5' id='cdel-costs-24'> <br/><br/>";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+
+<!--<form method="POST">-->
+     <div id="dynamicInputB">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="govuk-button" value="Add another" onClick="addInputB('dynamicInputB');">
+			
+			
+			<div class="govuk-form-group">
+  <label class="govuk-label" for="project-name">
+    Total CDEL (£m) from current financial year onwards
+  </label>
+  <span id="project-name-hint" class="govuk-hint">
+    (in nominal terms, i.e. do not adjust for inflation)
+
+  </span>
+	
+	<input class="govuk-input govuk-!-width-one-half" id="total-cdel" name="total-cdel" type="text" value="{{ data['total-cdel'] }}">
+	
+  
+</div>
+			
+			
+			
+			
+			
+			<div class="govuk-form-group">
+  <label class="govuk-label" for="project-name">
+   Total RDEL (£m) from current financial year onwards
+  </label>
+  <span id="project-name-hint" class="govuk-hint">
+    (in nominal terms, i.e. do not adjust for inflation)
+
+  </span>
+	
+	<input class="govuk-input govuk-!-width-one-half" id="total-cdel" name="total-rdel" type="text" value="{{ data['total-rdel'] }}">
+	
+  
+</div>
 
      <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
@@ -238,376 +435,6 @@
 			
 			
 
-		<div class="govuk-form-group">
-  <label class="govuk-label" for="Directorate">
- Directorate	
-  </label>
-  <select class="govuk-select" id="Directorate" name="Directorate">
-    
-    <option value="Major Rail Projects Developmen" selected>Major Rail Projects Development</option>
-    <option value="Phase 1 HS2 ">Phase 1 HS2 </option>
-	  <option value="Phase 2
-and Northern Powerhouse Rail">Phase 2
-and Northern Powerhouse Rail </option>
-    <option value="Programme Integration">Programme Integration</option>
-  </select>
-</div>
-		
-	<!--		<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
- Type of project 	
-  </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="published">DfT Group 1 </option>
-    <option value="updated" selected>DfT Group 2 </option>
-    <option value="views">DfT Group 3 </option>
-    <option value="comments">DfT Group 4 </option>
-  </select>
-</div>-->  
-		
-		<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="name-of-programme">
-    <span class="govuk-label---s">  Division</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="division" name="division" type="text" value="{{ data['division'] }}">
-</div>
-		
-		
-		
-		
-		<!--  Type of Project-->
-		<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend ">
-
-  
-      Type of project
-
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="project-type-conditional-1" name="project-type" type="radio" value="Standalone project" {{ checked('project-type','Standalone project') }} data-aria-controls="conditional-project-type-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-1">
-     Standalone project
-      </label>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="project-type-conditional-2" name="project-type" type="radio" value="Project within a programme" {{ checked('project-type','Project within a programme') }} data-aria-controls="conditional-project-type-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="child-1-gender-conditional-2">
-       Project within a programme
-      </label>
-      </div>
-		
-		 <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="project-type-conditional-3" name="project-type" type="radio" value="Competitive fund" {{ checked('project-type','Competitive fund') }} data-aria-controls="conditional-project-type-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-3">
-       Competitive fund
-      </label>
-      </div>
-		
-		 <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="project-type-conditional-4" name="project-type" type="radio" value="Grant fund" {{ checked('project-type','Grant fund') }} data-aria-controls="conditional-project-type-conditional-4">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-4">
-   	Grant fund
-      </label>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="project-type-conditional-5" name="project-type" type="radio" value="Others" {{ checked('child-1-gender','Others') }} data-aria-controls="conditional-project-type-conditional-5">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-5">
-       Others
-      </label>
-      </div>
-      <div class="govuk-radios__conditional" id="conditional-project-type-conditional-5">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="project-type-text">
-    Please specify
-  </label>
-            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="project-type-others" type="text" value="{{ data['project-type-others'] }}">
-        </div>
-
-      </div>
-    </div>
-  </fieldset>
-</div>
-
-		
-		<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="name-of-programme">
-    <span class="govuk-label---s">  If it is a project that is part of a programme, what is the name of the programme?
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="name-of-programme" name="name-of-programme" type="text" value="{{ data['name-of-programme'] }}">
-</div>
-		<!--  political commitment -->
-		<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend ">
-
-      Has there been a political commitment to undertake this specific project?	
-	
-
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-1" name="political-commitment" type="radio" value="Yes, a public announcement has been made about this scheme/project" {{ checked('project-type','Yes, a public announcement has been made about this scheme/project') }} data-aria-controls="conditional-political-commitment-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="project-type-conditional-1">
-   Yes, a public announcement has been made about this scheme/project
-      </label>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-2" name="political-commitment" type="radio" value="No, but DfT has publicly committed to doing something to address a key objective of this project" {{ checked('political-commitment','No, but DfT has publicly committed to doing something to address a key objective of this project') }} data-aria-controls="conditional-project-type-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-2">
-    No, but DfT has publicly committed to doing something to address a key objective of this project
-      </label>
-      </div>
-		
-		 <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-3" name="political-commitment" type="radio" value="No, there has been no public commitment this project" {{ checked('political-commitment','No, there has been no public commitment this project') }} data-aria-controls="conditional-political-commitment-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-3">
-      No, there has been no public commitment this project 
-      </label>
-      </div>
-		
-	
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="political-commitment-conditional-4" name="political-commitment" type="radio" value="Others" {{ checked('political-commitment','Others') }} data-aria-controls="conditional-political-commitment-conditional-4">
-        <label class="govuk-label govuk-radios__label" for="political-commitment-conditional-4">
-       Others
-      </label>
-      </div>
-      <div class="govuk-radios__conditional" id="conditional-political-commitment-conditional-4">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="political-commitment-text">
-    Please specify
-  </label>
-            <input class="govuk-input govuk-!-width-one-third" id="political-commitment-text" name="political-commitment-others" type="text" value="{{ data['political-commitment-others'] }}">
-        </div>
-
-      </div>
-    </div>
-  </fieldset>
-</div>
-
-		<!--  agreed with minister -->
-		<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend ">
-
-      Is the project/activity part of current policy assumptions that have been agreed with Ministers? 	
-	
-	
-
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="agreed-with-minister-conditional-1" name="agreed-with-minister" type="radio" value="Yes" {{ checked('agreed-with-minister','Yes') }} data-aria-controls="conditional-political-commitment-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="agreed-with-minister-conditional-1">
-   Yes
-      </label>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="agreed-with-minister-conditional-2" name="agreed-with-minister" type="radio" value="No" {{ checked('agreed-with-minister','No') }} data-aria-controls="conditional-agreed-with-minister-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="agreed-with-minister-conditional-2">
-    No 
-      </label>
-      </div>
-		
-		
-		
-	
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="agreed-with-minister-conditional-3" name="agreed-with-minister" type="radio" value="Others" {{ checked('agreed-with-minister','Others') }} data-aria-controls="conditional-agreed-with-minister-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="agreed-with-minister-conditional-3">
-       Others
-      </label>
-      </div>
-      <div class="govuk-radios__conditional" id="conditional-agreed-with-minister-conditional-3">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="agreed-with-minister-text">
-    Please specify
-  </label>
-            <input class="govuk-input govuk-!-width-one-third" id="agreed-with-minister-text" name="agreed-with-minister-others" type="text" value="{{ data['agreed-with-minister-others'] }}">
-        </div>
-
-      </div>
-    </div>
-  </fieldset>
-</div>
-		
-		
-		<!--  long term funding -->
-		<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend ">
-
-      Was there a Long-term funding commitment at SR15?	
-		
-	
-	
-
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="long-term-funding-conditional-1" name="long-term-funding" type="radio" value="Yes" {{ checked('long-term-funding','Yes') }} data-aria-controls="conditional-long-term-funding-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="along-term-funding-conditional-1">
-   Yes
-      </label>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="long-term-funding-conditional-2" name="long-term-funding" type="radio" value="No" {{ checked('long-term-funding','No') }} data-aria-controls="conditional-long-term-funding-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="long-term-funding-conditional-2">
-    No 
-      </label>
-      </div>
-		
-		
-		
-	
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="long-term-funding-conditional-3" name="long-term-funding" type="radio" value="Others" {{ checked('long-term-funding','Others') }} data-aria-controls="conditional-long-term-funding-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="long-term-funding-conditional-3">
-       Others
-      </label>
-      </div>
-      <div class="govuk-radios__conditional" id="conditional-long-term-funding-conditional-3">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="long-term-funding-text">
-    Please specify
-  </label>
-            <input class="govuk-input govuk-!-width-one-third" id="long-term-funding-text" name="long-term-funding-others" type="text" value="{{ data['long-term-funding-others'] }}">
-        </div>
-
-      </div>
-    </div>
-  </fieldset>
-</div>
-
-		
-		
-		<h2  class="govuk-heading-m">Key contacts</h2>
-	
-		<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="Senior-Responsible-Owner	">
-    <span class="govuk-label---s">  Senior Responsible Owner	
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="senior-responsible-owner" name="senior-responsible-owner" type="text" value="{{ data['senior-responsible-owner'] }}">
-</div>
-		
-			<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="project-manager">
-    <span class="govuk-label---s">  Project Manager
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="project-manager" name="project-manager" type="text" value="{{ data['project-manager'] }}">
-</div>
-			<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="senior-analytical-lead">
-    <span class="govuk-label---s">  Senior Analytical Lead
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="senior-analytical-lead" name="senior-analytical-lead" type="text" value="{{ data['senior-analytical-lead'] }}">
-</div>
-		
-		<!-- Input feild-->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="analytical-lead">
-    <span class="govuk-label---s">  Analytical Lead
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="analytical-lead" name="analytical-lead" type="text" value="{{ data['analytical-lead'] }}">
-</div>
-		
-		<!-- Input feild-->
-		
-		<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="policy-lead">
-    <span class="govuk-label---s">  Policy Lead
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="analytical-lead" name="policy-lead" type="text" value="{{ data['policy-lead'] }}">
-</div>
-		
-      	<!-- Input feild-->
-		
-		<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="SCS-Signing-off-data">
-    <span class="govuk-label---s"> SCS Signing off data
-</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="SCS-Signing-off-data" name="SCS-Signing-off-data" type="text" value="{{ data['SCS-Signing-off-data'] }}">
-</div>
-		
-		<!--  nominated SCS -->
-		<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend ">
-
-      Has this project been signed off by the nominated SCS?	
-	
-		
-	
-	
-
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="nominated-SCS-conditional-1" name="nominated-SCS" type="radio" value="Yes" {{ checked('nominated-SCS','Yes') }} data-aria-controls="conditional-nominated-SCS-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="nominated-SCS-conditional-1">
-   Yes
-      </label>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="nominated-SCS-conditional-2" name="nominated-SCS" type="radio" value="No" {{ checked('nominated-SCS','No') }} data-aria-controls="conditional-nominated-SCS-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="nominated-SCS-conditional-2">
-    No 
-      </label>
-      </div>
-		
-		
-		
-	
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="nominated-SCS-conditional-3" name="nominated-SCS" type="radio" value="Others" {{ checked('nominated-SCS','Others') }} data-aria-controls="conditional-nominated-SCS-conditional-3">
-        <label class="govuk-label govuk-radios__label" for="nominated-SCS-conditional-3">
-       Others
-      </label>
-      </div>
-      <div class="govuk-radios__conditional" id="conditional-nominated-SCS-conditional-3">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="nominated-SCS-text">
-    Please specify
-  </label>
-            <input class="govuk-input govuk-!-width-one-third" id="nominated-SCS-text" name="nominated-SCS-others" type="text" value="{{ data['nominated-SCS-others'] }}">
-        </div>
-
-      </div>
-    </div>
-  </fieldset>
-</div>
-		
-		
 		
 		
 		<button type="submit" class="govuk-button">
