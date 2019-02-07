@@ -1,13 +1,135 @@
 <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 <!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
 
+
+<script type="text/javascript" >
+
+$(document).ready(function()
+{
+$("#notifications").click(function()
+{
+$(this).css({"background": "url('images/icons.png') 0 -150px"});
+$("#counter").fadeOut("slow");
+$("#notification_bar").fadeToggle(000);
+$("#notifications").css({"background": "url('images/-icons.png') 0 -127px"});
+return false;
+});
+
+$(document).click(function()
+{
+$("#notification_bar").fadeOut("fast");
+});
+
+$("#notification_bar").click(function()
+{
+return false;
+});
+
+});
+</script>
 <style>
+	
+	
+	
+	
+	
+	.notifications-container ul{
+ color: #0b0c0c;
+    font-family: "nta",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+	position: relative;
+}
+.notifications-container li{
+	margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    left:-20px;
+    height: 25px;
+    display: block;
+}
+	.notifications-container p a{ text-decoration: none; margin: 0px 0 0 8px; display: block;
+	}
+
+#notifications:hover{
+
+}
+#notification_bar{
+    display: none;
+    width: 250px;
+    height: 220px;
+    background: #f9f9f9;
+    position: absolute;
+    left: -190px;
+    top: 45px;
+    border-radius: 5px;
+	border: 1px #f8f8f8 solid:
+		-moz-box-shadow: 2px 2px 6px #f1f1f1;
+  -webkit-box-shadow: 2px 2px 6px #f1f1f1;
+  box-shadow: 2px 2px 6px #ccc;
+}
+#arrowUp {
+	position: absolute;
+    top: -8px;
+    right: 40px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+#notification_bar_header{
+    position: absolute;
+    width: 250px;
+    border-bottom: 0px solid #e2e2e2;
+    top: 0px;
+    padding: 10px 0px 0px 10px;
+    border-radius:5px 5px 0px 0px;
+    color: #333;
+	font-weight: bold;
+}
+
+		#notification_bar_content{
+    position: absolute;
+    width: 250px;
+			height: 150px;
+    border-bottom: 0px solid #e2e2e2;
+    top: 30px;
+	padding: 5px 0px 5px 5px;
+    border-radius:15px 5px 0px 0px;
+    color: #333;
+}
+
+#notification_bar_footer{
+    position: absolute;
+    width: 250px;
+    border-top: 1px solid #e2e2e2;
+    bottom: 0px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius:0px 0px 5px 5px;
+    text-align: center;
+    color: #333;
+    background: #f9f9f9;
+}
+
+	#notification_bar_footer a{ text-decoration:none;}
+
+	.dashboard-box-link a .govuk-box-highlight p{color: #fff !important;}
+
+	.govuk-width-container{margin: 0px 0px 0px 5px;; width: 100%; max-width: 98%; } #content{margin: 0px; 0; padding: 20px;} .govuk-main-wrapper{padding: 10px;} .govuk-template__body{width: 100%; margin: 0px; padding: 0px; margin: 0;
+    background-color: #ffffff;}
+    #content{padding-top: 0px}
+    .govuk-footer {padding: 20px;}
+
+
+
 
 /* Progress indicator*/
 
 
 .progress-indicator {
- margin-bottom: 20px; margin-top: -40px;	zoom: 1
+ margin-bottom: 20px; margin-top: -30px;	zoom: 1
 }
 .progress-indicator:before, .progress-indicator:after {
 	content: '\0020';
